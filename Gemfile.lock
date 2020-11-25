@@ -257,6 +257,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   html-pipeline
+  jekyll-sitemap
   kramdown (>= 2.3.0)
 
 BUNDLED WITH
