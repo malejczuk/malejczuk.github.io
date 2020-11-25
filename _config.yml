@@ -1,6 +1,6 @@
 name: Kristoff Malejczuk
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
+#permalink: /blog/:year/:month/:day/:title
 
 # from https://github.com/jekyll/jekyll-sitemap
 url: "https://malejczuk.github.io" # the base hostname & protocol for your site
