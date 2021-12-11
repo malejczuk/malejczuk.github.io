@@ -64,10 +64,8 @@ ul.posts li {
     list-style: none;
     font-size: 1.25em;
 }
-ul.about1 {
-    padding-left:40px;
-    margin-top:-15px;
-    font-size:1.2em;
+ul.about li {
+    margin:-0.5em;
     font-family:'Open Sans';
 }
 p.about {
@@ -76,6 +74,12 @@ p.about {
     line-height: 1.4em;
     color: #333;
     text-align: 'justify';
+}
+ul.recs1 {
+    padding-left:40px;
+    margin-top:-15px;
+    font-size:1em;
+    font-family:'Open Sans';
 }
 /*h3, ul {
     padding-bottom: 20px;
