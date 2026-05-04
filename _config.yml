@@ -1,13 +1,9 @@
 title: "Kristoff Malejczuk's Website"
 author: Kristoff Malejczuk
 markdown: kramdown
-#permalink: /blog/:year/:month/:day/:title
-
-# from https://github.com/jekyll/jekyll-sitemap
-url: "https://malejczuk.github.io" # the base hostname & protocol for your site
+url: "https://thestudio.uno"
+baseurl: ""
 plugins:
     - jekyll-sitemap
     - jekyll-seo-tag
-
-# Google Analytics
 google_analytics: G-B637RMTJB4
