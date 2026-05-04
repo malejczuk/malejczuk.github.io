@@ -12,7 +12,7 @@ h1, h2 {
 h1 {
     font-size: 3em;
 }
-p, ol, ul.posts {
+p, ol, ul {
     font-size: 1.25em;
     line-height: 1.4em;
     color: #333;
