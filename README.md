@@ -1,5 +1,3 @@
-# malejczuk.github.io
+# My Website: 
 
-My (rather barren) website: https://malejczuk.github.io/.
-
-Thanks to Austin Tripp (https://github.com/AustinT) for the inspiration and Jonathan McGlone (http://jmcglone.com) for the tutorial. 
+Built with Jekyll and hosted at thestudio.uno (mirrored at https://malejczuk.github.io/).

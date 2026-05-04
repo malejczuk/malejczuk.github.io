@@ -1,45 +1,45 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-			<link rel="icon" href="/assets/favicon.ico">
-            <meta name="google-site-verification" content="1p2DnKc7ElrX3soLFvhbYVPtA24mwji9eqLcsNE3l6M" />
-            {% if site.google_analytics and jekyll.environment == 'production' %}
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {% seo %} <!-- generates title and meta -->
+
+		<link rel="stylesheet" type="text/css" href="{{ '/css/main.css' | relative_url }}">
+		<link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}">
+
+        <meta name="google-site-verification" content="1p2DnKc7ElrX3soLFvhbYVPtA24mwji9eqLcsNE3l6M" />
+
+        {% if site.google_analytics and jekyll.environment == 'production' %}
             {% include analytics.html %}
-            {% endif %}
-            {% seo %}
-            
-            <!-- font -->
-            <link rel="preconnect" href="https://fonts.gstatic.com">
-            <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-                    <li><a href="/podcast">Podcast</a></li>
-                    <li><a href="/recommendations">Recs</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="../cv/Kristoff-Malejczuk-Resume-20201125.pdf" target="_blank">CV</a></li>
-<!--	        		<li><a href="/blog">Blog</a></li>-->
-	    		</ul>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<div>
-			<footer>
-	    		<ul>
-	        		<li><a href="https://www.instagram.com/malejczuk/">Instagram</a></li>
-	        		<li><a href="https://github.com/malejczuk">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/kristoff-malejczuk/">LinkedIn</a></li>
-                    <li><a href="mailto:kamalejc@uwaterloo.ca">Email</a></li>
-				</ul>
-			</footer>
-			</div>
-		</body>
-	</html>
+        {% endif %}
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<nav aria-label="Main Navigation">
+    		<ul>
+        		<li><a href="{{'/' | relative_url }}">Home</a></li>
+        		<li><a href="{{'/studio' | relative_url }}">The Studio</a></li>
+        		<li><a href="{{'/yoga' | relative_url }}">Yoga</a></li>
+        		<li><a href="{{'/booklists' | relative_url }}">Booklists</a></li>
+                <li><a href="{{'/poetry' | relative_url }}">Poetry</a></li>
+	        	<li><a href="{{'/about' | relative_url }}">About</a></li>
+    		</ul>
+		</nav>
+		<main class="container">
+		    {{ content }}
+		</main>
+        <footer>
+    		<ul>
+                <li><a href="https://www.youtube.com/@thestudiowithkristoff">YouTube</a></li>
+        		<li><a href="https://x.com/malejczukk">X</a></li>
+                <li><a href="mailto:access.liquid70@icloud.com">Email</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
