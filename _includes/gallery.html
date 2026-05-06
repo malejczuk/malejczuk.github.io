@@ -1,0 +1,12 @@
+<div class="image-gallery">
+  {% assign folder_path = include.folder %}
+  {% for file in site.static_files %}
+    {% if file.path contains folder_path %}
+      {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.png' %}
+        <div class="gallery-item">
+          <img src="{{ file.path | relative_url }}" alt="Image from {{ folder_path }}">
+        </div>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</div>
