@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Kristoff Malejczuk, Engineer and Yogi
+title: Photography
 ---
 
-{% include gallery.html folder="assets/photography/azores" %}
+Under construction: I will link here to various galleries!
