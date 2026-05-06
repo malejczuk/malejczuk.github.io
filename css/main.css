@@ -32,6 +32,7 @@ a:hover {   /* hyperlink behaviour when cursor is hovering over link */
 img {
     float: left;
     margin-right: 30px;
+    margin-bottom: 20px;
 }
 /* ===============
 HEADER AND FOOTER
