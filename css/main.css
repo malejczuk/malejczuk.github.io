@@ -47,31 +47,29 @@ IMAGE GALLERY CLASS
 }
 .image-gallery img {
   width: 100%;
-  /* aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1; /* square images *//*
   object-fit: cover;
   border-radius: 5px;
   object-position: center;
   transition: transform 0.3s ease;
 }
 */
-
 .image-gallery {
-  column-count: 3; /* Number of columns */
+  column-count: 3;
   column-gap: 1rem;
 }
-
 .gallery-item {
-  display: inline-block; /* Prevents images from breaking across columns */
+  display: inline-block; /* prevents images from breaking across columns */
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
-
 .image-gallery img {
   width: 100%;
   height: auto; /* Maintains original aspect ratio */
+  border-radius: 5px;
   display: block;
+  transition: transform 0.3s ease;
 }
-
 .image-gallery img:hover {
   transform: scale(1.02);
 }
