@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Kristoff Malejczuk, Engineer and Yogi
+title: The Studio by Kristoff Malejczuk
 ---
 
 <style>
@@ -13,7 +13,7 @@ title: Kristoff Malejczuk, Engineer and Yogi
   }
 </style>
 
-# Welcome.
+# Welcome to The Studio.
 
 <div class="content-wrapper" markdown="1">
 ![me]({{ '/assets/IMG_6445.jpg' | relative_url }}){: style="width: 300px; margin-top: -20px;"}{: .img}
