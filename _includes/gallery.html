@@ -2,9 +2,12 @@
   {% assign folder_path = include.folder %}
   {% for file in site.static_files %}
     {% if file.path contains folder_path %}
-      {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.png' %}
+      {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.png' %}
         <div class="gallery-item">
-          <img src="{{ file.path | relative_url }}" alt="Image from {{ folder_path }}">
+          <!-- Wrap the image in a link to its own path -->
+          <a href="{{ file.path | relative_url }}" class="lightbox">
+          <img src="{{ file.path | relative_url }}" alt="{{ page.title }} - Photography">
+          </a>
         </div>
       {% endif %}
     {% endif %}
