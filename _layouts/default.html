@@ -14,6 +14,9 @@
         {% if site.google_analytics and jekyll.environment == 'production' %}
             {% include analytics.html %}
         {% endif %}
+        
+        <!-- Luminous CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/luminous-lightbox@2.4.0/dist/luminous-basic.min.css" >
 
         <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +30,7 @@
         		<li><a href="{{'/studio' | relative_url }}">The Studio</a></li>
         		<li><a href="{{'/yoga' | relative_url }}">Yoga</a></li>
         		<li><a href="{{'/booklists' | relative_url }}">Booklists</a></li>
+        		<li><a href="{{'/photography' | relative_url }}">Photography</a></li>
                 <li><a href="{{'/poetry' | relative_url }}">Poetry</a></li>
 	        	<li><a href="{{'/about' | relative_url }}">About</a></li>
     		</ul>
@@ -41,5 +45,11 @@
                 <li><a href="mailto:access.liquid70@icloud.com">Email</a></li>
 			</ul>
 		</footer>
+        <!-- Luminous JS -->
+        <script src="https://cdn.jsdelivr.net/npm/luminous-lightbox@2.4.0/dist/luminous.min.js"></script>
+        <script>
+          // This 'captures' the clicks so a new page doesn't open
+          new LuminousGallery(document.querySelectorAll(".lightbox"));
+        </script>
 	</body>
 </html>
