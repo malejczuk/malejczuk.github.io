@@ -2,39 +2,38 @@
 GLOBAL STYLES
    =============== */
 body {
-    font-family:'Open Sans', 'Helvetica', 'Arial', sans-serif;
-    margin: 60px auto;
-    width: 70%;
+  font-family:'Open Sans', 'Helvetica', 'Arial', sans-serif;
+  margin: 60px auto;
+  width: 70%;
 }
 h1, h2 {
-    font-family:'Helvetica', 'Arial', sans-serif;
+  font-family:'Helvetica', 'Arial', sans-serif;
 }
 h1 {
-    font-size: 3em;
+  font-size: 3em;
 }
 p, ol, ul {
-    font-size: 1.25em;
-    line-height: 1.4em;
-    color: #333;
+  font-size: 1.25em;
+  line-height: 1.4em;
+  color: #333;
 }
 ol ul {
-    list-style-type: disc;
+  list-style-type: disc;
 }
 a {         /* hyperlinks style */
-    text-decoration: none;  /* no underline */
-    color: #999;            /* nice grey colour */  
-    transition: color 0.2s; /* duration for text to darken when hovering */
+  text-decoration: none;  /* no underline */
+  color: #999;            /* nice grey colour */  
+  transition: color 0.2s; /* duration for text to darken when hovering */
 } 
 a:hover {   /* hyperlink behaviour when cursor is hovering over link */
-    text-decoration: underline;
-    color: #666;    /* text darkens when hovering */
+  text-decoration: underline;
+  color: #666;    /* text darkens when hovering */
 }
-img {
-    float: left;
-    margin-right: 30px;
-    margin-bottom: 20px;
+.content-wrapper img {
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 20px;
 }
-
 /* ===============
 IMAGE GALLERY CLASS
    =============== */
@@ -54,6 +53,7 @@ IMAGE GALLERY CLASS
   transition: transform 0.3s ease;
 }
 */
+/* image gallery */
 .image-gallery {
   column-count: 3;
   column-gap: 1rem;
@@ -73,25 +73,61 @@ IMAGE GALLERY CLASS
 .image-gallery img:hover {
   transform: scale(1.02);
 }
+/* Container for all gallery links */
+.gallery-index {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+/* Individual Gallery Card */
+.gallery-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border: 1px solid #eee; /* Subtle border for your overhaul style */
+  transition: transform 0.2s ease;
+}
+.gallery-card:hover {
+  transform: translateY(-5px);
+}
+.card-image-wrapper img {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Modern cinematic ratio */
+  object-fit: cover;
+  display: block;
+}
+.card-info {
+  padding: 1rem;
+}
+.card-info h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.card-info p {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
 /* ===============
 HEADER AND FOOTER
    =============== */
 footer {
-    clear: both;
-    border-top: 1px solid #d5d5d5;
-    font-family:'Helvetica', 'Arial', sans-serif;
-    font-size: .8em;
-    margin-top: 30px;
+  clear: both;
+  border-top: 1px solid #d5d5d5;
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: .8em;
+  margin-top: 30px;
 }
 nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', sans-serif;
-    padding: 0;
-    list-style: none;   /* no dots or bullets */
-    font-weight: bold;
+  font-family:'Helvetica', 'Arial', sans-serif;
+  padding: 0;
+  list-style: none;   /* no dots or bullets */
+  font-weight: bold;
 }
 nav ul li, footer ul li {
-    display: inline;    /* horizontally arranged list */
-    margin-right: 20px; /* space between list items */
+  display: inline;    /* horizontally arranged list */
+  margin-right: 20px; /* space between list items */
 }
 /* ===============
 CONTENT FORMATTER
@@ -107,22 +143,22 @@ span.small {
   font-size: smaller;
 }
 p.about {
-    font-size: 1em;
-    line-height: 1.4em;
-    color: #333;
-    text-align: justify;
+  font-size: 1em;
+  line-height: 1.4em;
+  color: #333;
+  text-align: justify;
 }
 ul.about li {
-    margin:-0.5em;
+  margin:-0.5em;
 }
 ul.posts { 
-    margin: 20px auto 40px; 
+  margin: 20px auto 40px; 
 }
 ul.posts li {
-    list-style: none;
+  list-style: none;
 }
 ul.recs {
-    padding-left:40px;
-    margin-top:-15px;
-    font-size:1em;
+  padding-left:40px;
+  margin-top:-15px;
+  font-size:1em;
 }
