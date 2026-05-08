@@ -30,6 +30,15 @@ a:hover {   /* hyperlink behaviour when cursor is hovering over link */
   color: #666;    /* text darkens when hovering */
 }
 /* ===============
+POEM
+   =============== */
+.poem-text {
+  white-space: pre-wrap; /* Preserves spaces and tabs, but wraps text if the screen is narrow */
+  font-family: inherit;
+  font-size: 1.25rem;
+  color: inherit;
+}
+/* ===============
 IMAGE GALLERY CLASS
    =============== */
 /*
