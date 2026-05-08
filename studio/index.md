@@ -17,11 +17,23 @@ In its current iteration, The Studio is a [YouTube channel](https://www.youtube.
 
 The primary aim of this project, as with all versions of The Studio, is the expression of self, and this is hopefully realized in a way that is equal parts entertaining and informative.
 
+For more on what I'm reading, and to follow along, click here for my [booklists]({{ '/booklists' | relative_url }}).
 I am currently working through a reading list of French Realism.
 
-<!-- insert grid of french realism books-->
-
-For more on what I'm reading, and to follow along, click here for my [booklists]({{ '/booklists' | relative_url }}).
+<div class="book-grid">
+  <div class="book-item">
+    <img src="{{ '/assets/book-covers/le-rouge-et-le-noir.jpg' | relative_url }}">
+    <p>Le Rouge et Le Noir</p>
+  </div>
+  <div class="book-item">
+    <img src="{{ '/assets/book-covers/le-pere-goriot.jpg' | relative_url }}">
+    <p>Le Père Goriot</p>
+  </div>
+  <div class="book-item">
+    <img src="{{ '/assets/book-covers/madame-bovary.jpg' | relative_url }}">
+    <p>Madame Bovary</p>
+  </div>
+</div>
 
 ## Entertainment Show
 The first deliberate expression of The Studio was as an entertainment show.
