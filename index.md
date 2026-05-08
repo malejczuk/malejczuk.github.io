@@ -1,6 +1,6 @@
 ---
 layout: default
-title: The Studio by Kristoff Malejczuk
+title: Welcome
 ---
 
 <style>
