@@ -51,5 +51,5 @@ Though performative, it was authentic, and I am proud of the show.
 It is a representation of who I was at the time I was making it.
 
 ## Poem
-The name "The Studio" comes from a [poem]({{ '/../photography' | relative_url }}) I wrote on my 23rd birthday.
+The name "The Studio" comes from a [poem]({{ '/writing/studio' | relative_url }}) I wrote on my 23rd birthday.
 Captured by a sudden bout of inspiration while out walking around Russian Hill, I hurried home and wrote the poem in a single sitting, to the best of my recollection.
