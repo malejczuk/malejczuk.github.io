@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<style>
+  .gallery-header h1 { margin-bottom: 0; }
+  .gallery-header h3 { margin-top: 0; padding-top: 5px; opacity: 0.8; }
+</style>
+
+<div class="gallery-header" >
+<h1>{{ page.title }}</h1>
+{% if page.shot_on %}
+  <h3>Shot on: {{ page.shot_on }}</h3>
+{% endif %}
+</div>
+
+<div class="gallery-description">
+  {{ content }}
+</div>
+
+{% include gallery.html folder=page.gallery_folder %}

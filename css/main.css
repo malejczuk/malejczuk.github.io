@@ -2,56 +2,211 @@
 GLOBAL STYLES
    =============== */
 body {
-    font-family:'Open Sans', 'Helvetica', 'Arial', sans-serif;
-    margin: 60px auto;
-    width: 70%;
+  font-family:'Open Sans', 'Helvetica', 'Arial', sans-serif;
+  margin: 60px auto;
+  width: 70%;
 }
 h1, h2 {
-    font-family:'Helvetica', 'Arial', sans-serif;
+  font-family:'Helvetica', 'Arial', sans-serif;
 }
 h1 {
-    font-size: 3em;
+  font-size: 3em;
 }
 p, ol, ul {
-    font-size: 1.25em;
-    line-height: 1.4em;
-    color: #333;
+  font-size: 1.25em;
+  line-height: 1.4em;
+  color: #333;
 }
 ol ul {
-    list-style-type: disc;
+  list-style-type: disc;
 }
 a {         /* hyperlinks style */
-    text-decoration: none;  /* no underline */
-    color: #999;            /* nice grey colour */  
-    transition: color 0.2s; /* duration for text to darken when hovering */
+  text-decoration: none;  /* no underline */
+  color: #999;            /* nice grey colour */  
+  transition: color 0.2s; /* duration for text to darken when hovering */
 } 
 a:hover {   /* hyperlink behaviour when cursor is hovering over link */
-    text-decoration: underline;
-    color: #666;    /* text darkens when hovering */
+  text-decoration: underline;
+  color: #666;    /* text darkens when hovering */
 }
-img {
-    float: left;
-    margin-right: 30px;
+aside {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+/* ===============
+POEM
+   =============== */
+.indent-2 { padding-left: 2rem; }
+.indent-3 { padding-left: 3rem; }
+.indent-4 { padding-left: 4rem; }
+
+.poem-text {
+  white-space: pre-wrap; /* Preserves spaces and tabs, but wraps text if the screen is narrow */
+  font-family: inherit;
+  font-size: 1.25rem;
+}
+hr {
+  border: 0;
+  border-top: 2px solid currentColor;
+}
+/* ===============
+WRITING
+   =============== */
+.writing-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px; /* Content takes the rest, sidebar is 250px */
+  gap: 4rem; /* Space between the poem and the menu */
+  align-items: start;
+}
+.writing-sidebar {
+  position: sticky; /* This keeps the menu visible as the reader scrolls */
+  top: 2rem;
+  font-size: 0.9em;
+  border-left: 1px solid currentColor; /* A subtle line like your hr */
+  padding-left: 1.5rem;
+}
+/* ===============
+IMAGE GALLERY CLASS
+   =============== */
+/*
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.image-gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* square images *//*
+  object-fit: cover;
+  border-radius: 5px;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+*/
+/* image gallery */
+.image-gallery {
+  column-count: 3;
+  column-gap: 1rem;
+}
+.gallery-item {
+  display: inline-block; /* prevents images from breaking across columns */
+  width: 100%;
+  margin-bottom: 0rem;
+}
+.image-gallery img {
+  width: 100%;
+  height: auto; /* Maintains original aspect ratio */
+  border-radius: 5px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.image-gallery img:hover {
+  transform: scale(1.02);
+}
+/* Container for all gallery links */
+.gallery-index {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+/* Individual Gallery Card */
+.gallery-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border: 1px solid #eee; /* Subtle border for your overhaul style */
+  transition: transform 0.2s ease;
+}
+.gallery-card:hover {
+  transform: translateY(-5px);
+}
+.card-image-wrapper img {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Modern cinematic ratio */
+  object-fit: cover;
+  display: block;
+}
+.card-info {
+  padding: 1rem;
+}
+.card-info h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.card-info p {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+/* ===============
+BOOK GRID
+   =============== */
+/* Specific Grid for Books */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin: auto;
+  max-width: 800px;
+  justify-content: center;
+  align-items: end; /* Sits books on a shared 'shelf' line */
+}
+.book-item {
+  text-align: center;
+}
+.book-item img {
+  width: 100%;
+  aspect-ratio: 2 / 3.3;
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Adds weight to the books */
+  border-radius: 2px; /* Sharper edges for a book look */
+  display: block;
+  margin-top: 10px;
+}
+/* Mobile: Stack them vertically on phones */
+@media (max-width: 768px) {
+  .book-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+/* ===============
+VIDEO FORMATTING
+   =============== */
+.video-container {
+  width: 100%;           /* "Fill the screen on mobile" */
+  max-width: 750px;      /* "But stop growing at 650px on desktop" */
+  margin: 0 auto 20px;   /* Center it and add bottom spacing */
+  aspect-ratio: 16 / 9;  /* Keep the cinematic shape */
+}
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 /* ===============
 HEADER AND FOOTER
    =============== */
 footer {
-    clear: both;
-    border-top: 1px solid #d5d5d5;
-    font-family:'Helvetica', 'Arial', sans-serif;
-    font-size: .8em;
-    margin-top: 30px;
+  clear: both;
+  border-top: 1px solid #d5d5d5;
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: .8em;
+  margin-top: 30px;
 }
 nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', sans-serif;
-    padding: 0;
-    list-style: none;   /* no dots or bullets */
-    font-weight: bold;
+  font-family:'Helvetica', 'Arial', sans-serif;
+  padding: 0;
+  list-style: none;   /* no dots or bullets */
+  font-weight: bold;
 }
 nav ul li, footer ul li {
-    display: inline;    /* horizontally arranged list */
-    margin-right: 20px; /* space between list items */
+  display: inline;    /* horizontally arranged list */
+  margin-right: 20px; /* space between list items */
 }
 /* ===============
 CONTENT FORMATTER
@@ -60,6 +215,11 @@ CONTENT FORMATTER
   /* This forces the div to contain the floated image */
   display: flow-root; 
 }
+.content-wrapper img {
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
 /* ===============
 COMPONENT-SPECIFIC SPECS
    =============== */
@@ -67,22 +227,22 @@ span.small {
   font-size: smaller;
 }
 p.about {
-    font-size: 1em;
-    line-height: 1.4em;
-    color: #333;
-    text-align: justify;
+  font-size: 1em;
+  line-height: 1.4em;
+  color: #333;
+  text-align: justify;
 }
 ul.about li {
-    margin:-0.5em;
+  margin:-0.5em;
 }
 ul.posts { 
-    margin: 20px auto 40px; 
+  margin: 20px auto 40px; 
 }
 ul.posts li {
-    list-style: none;
+  list-style: none;
 }
 ul.recs {
-    padding-left:40px;
-    margin-top:-15px;
-    font-size:1em;
+  padding-left:40px;
+  margin-top:-15px;
+  font-size:1em;
 }
