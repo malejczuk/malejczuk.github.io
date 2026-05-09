@@ -217,7 +217,14 @@ CONTENT FORMATTER
 }
 .content-wrapper img {
   float: left;
+  margin-left: 0px;
   margin-right: 30px;
+  margin-bottom: 20px;
+}
+.content-wrapper img.align-right {
+  float: right;
+  margin-left: 30px;
+  margin-right: 0px;
   margin-bottom: 20px;
 }
 /* ===============
