@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<div class="writing-layout" markdown="1">
+<article class="writing-content" markdown="1">
+  <h2 style="margin-bottom: 0;">{{ page.title }}</h2>
+  {{ content }}
+</article>
+
+<aside class="writing-sidebar">
+  {% capture sidebar_content %}{% include writing-menu-sidebar.md %}{% endcapture %}
+  {{ sidebar_content | markdownify }}
+</aside>
+</div>
+
+{% capture signature %}
+
+<div markdown="1">
+---
+Kristoff Malejczuk <br>
+{{ page.date }}
+{% endcapture %}
+
+<div class="sig-wrapper">
+  {{ signature | markdownify }}
+</div>
+<div>

@@ -1,9 +1,8 @@
 ---
-layout: default
+layout: writing
 title: The Studio
+date: May 21, 2020
 ---
-
-## The Studio
 
 My mind is unwritten music \\
 And a million notes played at once: \\
@@ -22,7 +21,3 @@ And in the studio I am free \\
 To twist and turn and bob and weave! \\
 I would come here often \\
 But it's not often that I have the key.
-
----
-Kristoff Malejczuk \\
-May 21, 2020

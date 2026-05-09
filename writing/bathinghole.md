@@ -1,9 +1,8 @@
 ---
-layout: default
+layout: writing
 title: The Bathing Hole
+date: April 22, 2022
 ---
-
-## The Bathing Hole
 
 <div class="poem-text">
 Strong currents flooded me from San Francisco.
@@ -49,7 +48,6 @@ Yet I do not fight.
     I do nothing but float
         as I let the water carry me
                 to where I'm supposed to go.
+
 </div>
----
-Kristoff Malejczuk
-April 22, 2022
+

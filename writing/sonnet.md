@@ -1,9 +1,8 @@
 ---
-layout: default
+layout: writing
 title: Sonnet
+date: July 5, 2020
 ---
-
-# Sonnet
 
 How shocked am I to feel the Sun's sharp rays, <br>
 Perplexed I question where did Winter go? <br>
@@ -23,6 +22,3 @@ Those born into this game can make no rules. <br>
 The path lies clear; if Time stops not to breathe, <br>
 Go forth and fight -- at least she must be seized! <br>
 
----
-Kristoff Malejczuk <br>
-July 5, 2020

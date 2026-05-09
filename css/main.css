@@ -29,14 +29,43 @@ a:hover {   /* hyperlink behaviour when cursor is hovering over link */
   text-decoration: underline;
   color: #666;    /* text darkens when hovering */
 }
+aside {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
 /* ===============
 POEM
    =============== */
+.indent-2 { padding-left: 2rem; }
+.indent-3 { padding-left: 3rem; }
+.indent-4 { padding-left: 4rem; }
+
 .poem-text {
   white-space: pre-wrap; /* Preserves spaces and tabs, but wraps text if the screen is narrow */
   font-family: inherit;
   font-size: 1.25rem;
-  color: inherit;
+}
+hr {
+  border: 0;
+  border-top: 2px solid currentColor;
+}
+/* ===============
+WRITING
+   =============== */
+.writing-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px; /* Content takes the rest, sidebar is 250px */
+  gap: 4rem; /* Space between the poem and the menu */
+  align-items: start;
+}
+.writing-sidebar {
+  position: sticky; /* This keeps the menu visible as the reader scrolls */
+  top: 2rem;
+  font-size: 0.9em;
+  border-left: 1px solid currentColor; /* A subtle line like your hr */
+  padding-left: 1.5rem;
 }
 /* ===============
 IMAGE GALLERY CLASS
