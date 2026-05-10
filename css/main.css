@@ -2,15 +2,16 @@
 GLOBAL STYLES
    =============== */
 body {
-  font-family:'Open Sans', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
   margin: 60px auto;
   width: 70%;
 }
-h1, h2 {
-  font-family:'Helvetica', 'Arial', sans-serif;
-}
 h1 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
   font-size: 3em;
+}
+h2 {
+  font-weight: 800;
 }
 p, ol, ul {
   font-size: 1.25em;
@@ -36,12 +37,14 @@ aside {
   margin: 0;
 }
 /* ===============
+HOME PAGE
+   =============== */
+/* ===============
 POEM
    =============== */
 .indent-2 { padding-left: 2rem; }
 .indent-3 { padding-left: 3rem; }
 .indent-4 { padding-left: 4rem; }
-
 .poem-text {
   white-space: pre-wrap; /* Preserves spaces and tabs, but wraps text if the screen is narrow */
   font-family: inherit;
@@ -173,7 +176,7 @@ BOOK GRID
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
-  margin: auto;
+  margin: 30px auto 30px;   /* Center it and add bottom spacing */
   max-width: 800px;
   justify-content: center;
   align-items: end; /* Sits books on a shared 'shelf' line */
@@ -203,7 +206,7 @@ VIDEO FORMATTING
 .video-container {
   width: 100%;           /* "Fill the screen on mobile" */
   max-width: 750px;      /* "But stop growing at 650px on desktop" */
-  margin: 0 auto 20px;   /* Center it and add bottom spacing */
+  margin: 30px auto 30px;   /* Center it and add bottom spacing */
   aspect-ratio: 16 / 9;  /* Keep the cinematic shape */
 }
 .video-container iframe {
@@ -243,26 +246,22 @@ CONTACT FORM
   border-bottom: 1px solid #eee;
   text-align: center;
 }
-
 .newsletter-header h3 {
   font-family: inherit;
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
 }
-
 .newsletter-header p {
   color: #666;
   font-size: 1rem;
   margin-bottom: 2rem;
 }
-
 .newsletter-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-
 .newsletter-form input {
   flex: 1;
   padding: 12px 0;
@@ -273,11 +272,9 @@ CONTACT FORM
   outline: none;
   transition: border-color 0.3s;
 }
-
 .newsletter-form input:focus {
   border-bottom: 1px solid #000;
 }
-
 .newsletter-form button {
   background: #000;
   color: #fff;
@@ -289,61 +286,14 @@ CONTACT FORM
   letter-spacing: 0.05em;
   transition: all 0.3s ease;
 }
-
 .newsletter-form button:hover {
   background: #fff;
   color: #000;
 }
-
 /* Stacks on mobile */
 @media (max-width: 500px) {
   .newsletter-form {
     flex-direction: column;
     align-items: stretch;
   }
-}
-/* ===============
-CONTENT FORMATTER
-   ===============  */
-.content-wrapper {
-  /* This forces the div to contain the floated image */
-  display: flow-root; 
-}
-.content-wrapper img {
-  float: left;
-  margin-left: 0px;
-  margin-right: 30px;
-  margin-bottom: 20px;
-}
-.content-wrapper img.align-right {
-  float: right;
-  margin-left: 30px;
-  margin-right: 0px;
-  margin-bottom: 20px;
-}
-/* ===============
-COMPONENT-SPECIFIC SPECS
-   =============== */
-span.small {
-  font-size: smaller;
-}
-p.about {
-  font-size: 1em;
-  line-height: 1.4em;
-  color: #333;
-  text-align: justify;
-}
-ul.about li {
-  margin:-0.5em;
-}
-ul.posts { 
-  margin: 20px auto 40px; 
-}
-ul.posts li {
-  list-style: none;
-}
-ul.recs {
-  padding-left:40px;
-  margin-top:-15px;
-  font-size:1em;
 }
