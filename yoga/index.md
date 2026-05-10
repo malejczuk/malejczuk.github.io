@@ -32,11 +32,11 @@ I quickly experienced large leaps in my practice.
 Several months after joining, I was looking once more for a way to deepen my practice.
 I signed up for the next teacher training offered by my studio.
 
-In 2023, I completed my **200-hour YTT in Hatha Vinyasa** under my teachers Danni Pomplun and Yvonne Kingsley, the co-founders of HAUM.
-The training was deeply impactful, and in its course I realized in my heart that I had to leave my job.
+In 2023, I completed a **200-hour YTT in Hatha Vinyasa** under my teachers Danni Pomplun and Yvonne Kingsley, co-founders of HAUM.
+The training was deeply impactful, and in its course I realized that I had to leave my job.
 
 I left my job in early 2024 and spent one year backpacking around Latin America.
-In 2025, I studied on a **monthlong Karma Yoga retreat** under my teacher Gabriel at Yambolombia in Salento, Colombia.
+In 2025, I studied on a **monthlong Karma Yoga retreat** under my teacher Gabriel, at Yambolombia in Salento, Colombia.
 Following this experience, I spent one month cradled in the Amazon jungle.
 
 Since late 2025, I have been practicing **Mysore-style Hatha Ashtanga** under Aleix Griñó at Viveka Yoga Shala in Barcelona.
