@@ -52,6 +52,29 @@ hr {
   border-top: 2px solid currentColor;
 }
 /* ===============
+IMAGE TEXT PAIR
+   =============== */
+.image-text-pair {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 100px;
+  width: 100%;
+}
+.image-text-pair img {
+  flex: 1 1 auto;
+  width: 600px;
+  height: auto;
+  display: block;
+}
+.pair-text {
+  flex: 1 1 auto;
+}
+/* Right-aligned variant using a class */
+.image-text-pair.align-right {
+  flex-direction: row-reverse;
+}
+/* ===============
 WRITING
    =============== */
 .writing-layout {
