@@ -7,18 +7,19 @@ title: The Studio
 
 The Studio is an organic, evolving project that has taken several forms:
 * [YouTube Project](#youtube-project) (2026-ongoing)
-* [Entertainment Show (Podcast)](#entertainment-show) (2020-2021)
+* [Entertainment Show / Podcast](#entertainment-show) (2020-2021)
 * [Poem](#poem) (2020)
+<br>
+<br>
 
 ## YouTube Project
-In its current iteration, The Studio is a [YouTube channel](https://www.youtube.com/@thestudiowithkristoff) through which I am sharing my exploration of different literary traditions.
+In its current iteration, The Studio is a [YouTube channel](https://www.youtube.com/@thestudiowithkristoff) capturing my exploration of different literary traditions.
+The primary aim of this project, as with all versions of The Studio, is the expression of self, and this is hopefully realized in a way that is equal parts entertaining and informative.
 
 {% include youtube.html id="C-RX0yIU0Q0" %}
 
-The primary aim of this project, as with all versions of The Studio, is the expression of self, and this is hopefully realized in a way that is equal parts entertaining and informative.
-
-For more on what I'm reading, and to follow along, click here for my [booklists]({{ '/studio/booklists' | relative_url }}).
 I am currently working through a reading list of French Realism.
+For more on what I'm reading, and to follow along, click here for my [booklists]({{ '/studio/booklists' | relative_url }}).
 
 <div class="book-grid">
   <div class="book-item">
@@ -34,21 +35,21 @@ I am currently working through a reading list of French Realism.
     <p>Madame Bovary</p>
   </div>
 </div>
+<br>
 
 ## Entertainment Show
-The first deliberate expression of The Studio was as an entertainment show.
-The show consisted entirely of monologues covering topics in Society & Culture, save for one episode featuring a friend as a guest.
+This version of The Studio is now a completed art project: 15 episodes recorded across 11 months in 2020-2021.
+It is still available on [Spotify](https://open.spotify.com/show/0S3MtLeQQBwmxzheY7s0E8), [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-studio-with-kristoff-malejczuk/id1546676717), and [YouTube (audio only)](https://youtube.com/playlist?list=PLx0mm7ACPxySibL2H4VQzwtVywzp-Wyh0&si=PF0LRpDhxzUxJewM).
 
 {% include youtube.html id="Lc_jFwHbg3k" %}
 
 >_"One of the premier pieces of English language audio content available on the Internet, Kristoff presents truly novel perspectives on society, culture and art through his authentic, unapologetic and riveting soliloquies."_
-> -- Kristoff Malejczuk, 2021 (as you can see, I believed strongly in the quality of the show)
+> -- Kristoff Malejczuk, 2021 (needless to say, I was a strong believer in the quality of the show)
 
-This version of The Studio is now a completed art project: 15 episodes recorded across 11 months in 2020-2021.
-It is still available on [Spotify](https://open.spotify.com/show/0S3MtLeQQBwmxzheY7s0E8), [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-studio-with-kristoff-malejczuk/id1546676717), and [YouTube (audio only)](https://youtube.com/playlist?list=PLx0mm7ACPxySibL2H4VQzwtVywzp-Wyh0&si=PF0LRpDhxzUxJewM).
-
+The Studio, in this iteration, consisted almost entirely of monologues covering topics in Society & Culture.
 Though performative, it was authentic, and I am proud of the show.
-It is a representation of who I was at the time I was making it.
+It is a representation of who I was at the time that I was making it.
+<br><br>
 
 ## Poem
 The name "The Studio" comes from a [poem]({{ '/writing/studio' | relative_url }}) I wrote on my 23rd birthday.
