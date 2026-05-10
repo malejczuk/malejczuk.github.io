@@ -2,15 +2,16 @@
 GLOBAL STYLES
    =============== */
 body {
-  font-family:'Open Sans', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
   margin: 60px auto;
   width: 70%;
 }
-h1, h2 {
-  font-family:'Helvetica', 'Arial', sans-serif;
-}
 h1 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
   font-size: 3em;
+}
+h2 {
+  font-weight: 800;
 }
 p, ol, ul {
   font-size: 1.25em;
@@ -36,12 +37,14 @@ aside {
   margin: 0;
 }
 /* ===============
+HOME PAGE
+   =============== */
+/* ===============
 POEM
    =============== */
 .indent-2 { padding-left: 2rem; }
 .indent-3 { padding-left: 3rem; }
 .indent-4 { padding-left: 4rem; }
-
 .poem-text {
   white-space: pre-wrap; /* Preserves spaces and tabs, but wraps text if the screen is narrow */
   font-family: inherit;
@@ -50,6 +53,29 @@ POEM
 hr {
   border: 0;
   border-top: 2px solid currentColor;
+}
+/* ===============
+IMAGE TEXT PAIR
+   =============== */
+.image-text-pair {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 100px;
+  width: 100%;
+}
+.image-text-pair img {
+  flex: 1 1 auto;
+  width: 600px;
+  height: auto;
+  display: block;
+}
+.pair-text {
+  flex: 1 1 auto;
+}
+/* Right-aligned variant using a class */
+.image-text-pair.align-right {
+  flex-direction: row-reverse;
 }
 /* ===============
 WRITING
@@ -150,7 +176,7 @@ BOOK GRID
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
-  margin: auto;
+  margin: 30px auto 30px;   /* Center it and add bottom spacing */
   max-width: 800px;
   justify-content: center;
   align-items: end; /* Sits books on a shared 'shelf' line */
@@ -180,7 +206,7 @@ VIDEO FORMATTING
 .video-container {
   width: 100%;           /* "Fill the screen on mobile" */
   max-width: 750px;      /* "But stop growing at 650px on desktop" */
-  margin: 0 auto 20px;   /* Center it and add bottom spacing */
+  margin: 30px auto 30px;   /* Center it and add bottom spacing */
   aspect-ratio: 16 / 9;  /* Keep the cinematic shape */
 }
 .video-container iframe {
@@ -209,40 +235,65 @@ nav ul li, footer ul li {
   margin-right: 20px; /* space between list items */
 }
 /* ===============
-CONTENT FORMATTER
+CONTACT FORM
    ===============  */
-.content-wrapper {
-  /* This forces the div to contain the floated image */
-  display: flow-root; 
+.newsletter-container {
+  max-width: 450px;
+  margin: 5rem auto;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  text-align: center;
 }
-.content-wrapper img {
-  float: left;
-  margin-right: 30px;
-  margin-bottom: 20px;
+.newsletter-header h3 {
+  font-family: inherit;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
 }
-/* ===============
-COMPONENT-SPECIFIC SPECS
-   =============== */
-span.small {
-  font-size: smaller;
+.newsletter-header p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 2rem;
 }
-p.about {
-  font-size: 1em;
-  line-height: 1.4em;
-  color: #333;
-  text-align: justify;
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-ul.about li {
-  margin:-0.5em;
+.newsletter-form input {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
 }
-ul.posts { 
-  margin: 20px auto 40px; 
+.newsletter-form input:focus {
+  border-bottom: 1px solid #000;
 }
-ul.posts li {
-  list-style: none;
+.newsletter-form button {
+  background: #000;
+  color: #fff;
+  padding: 12px 25px;
+  border: 1px solid #000;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
 }
-ul.recs {
-  padding-left:40px;
-  margin-top:-15px;
-  font-size:1em;
+.newsletter-form button:hover {
+  background: #fff;
+  color: #000;
+}
+/* Stacks on mobile */
+@media (max-width: 500px) {
+  .newsletter-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
