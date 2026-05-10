@@ -2,6 +2,7 @@
 layout: default
 title: Yoga
 ---
+
 # Yoga
 
 <div class="image-text-pair" markdown="1">
