@@ -6,13 +6,13 @@ title: The Studio
 # The Studio with Kristoff Malejczuk 
 
 The Studio is an organic, evolving project that has taken several forms:
-* [YouTube Project](#youtube-project) (2026-ongoing)
+* [Literature Project / Youtube](#youtube-project) (2026-ongoing)
 * [Entertainment Show / Podcast](#entertainment-show) (2020-2021)
 * [Poem](#poem) (2020)
 <br>
 <br>
 
-## YouTube Project
+## Literature Project
 In its current iteration, The Studio is a [YouTube channel](https://www.youtube.com/@thestudiowithkristoff) capturing my exploration of different literary traditions.
 The primary aim of this project, as with all versions of The Studio, is the expression of self, and this is hopefully realized in a way that is equal parts entertaining and informative.
 
