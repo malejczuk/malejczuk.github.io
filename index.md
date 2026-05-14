@@ -5,8 +5,8 @@ title: Welcome
 
 # Welcome to The Studio.
 
-<div class="image-text-pair" markdown="1">
-<img src="{{'/assets/home/IMG_3853.JPG' | relative_url }}">
+<div class="image-text-pair home-intro" markdown="1">
+<img src="{{'/assets/home/IMG_3853.JPG' | relative_url }}" alt="Kristoff in Montserrat">
 <div class="pair-text" markdown="1">
 ## My name is Kristoff and I live in Barcelona.
 

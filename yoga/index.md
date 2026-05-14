@@ -5,8 +5,8 @@ title: Yoga
 
 # Yoga
 
-<div class="image-text-pair" markdown="1">
-<img src="{{'/assets/yoga/IMG_4261.JPG' | relative_url }}">
+<div class="image-text-pair yoga-section yoga-teaching" markdown="1">
+<img src="{{'/assets/yoga/IMG_4261.JPG' | relative_url }}" alt="Kristoff practicing yoga">
 <div class="pair-text" markdown="1">
 ## Teaching in Barcelona
 I teach two weekly classes at **Espai Adarsha**:
@@ -18,9 +18,9 @@ See the [studio website](https://www.espaiadarsha.com/yoga) or contact me direct
 The studio is located near the Verdaguer (L4/L5) metro station in the Eixample/Gràcia neighbourhood.
 </div>
 </div>
-<br>
-<div class="image-text-pair align-right" markdown="1">
-<img src="{{ '/assets/yoga/0K4A0226.jpg' | relative_url }}">
+
+<div class="image-text-pair yoga-section align-right" markdown="1">
+<img src="{{ '/assets/yoga/0K4A0226.jpg' | relative_url }}" alt="Kristoff teaching yoga">
 <div class="pair-text" markdown="1">
 ## My Path of Yoga
 
@@ -44,4 +44,3 @@ Since late 2025, I have been practicing **Mysore-style Hatha Ashtanga** under Al
 As of 2026, I teach regularly at Espai Adarsha, also in Barcelona.
 </div>
 </div>
-
