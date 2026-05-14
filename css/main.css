@@ -3,8 +3,14 @@ GLOBAL STYLES
    =============== */
 body {
   font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+  box-sizing: border-box;
+  background: #fff;
+  color: #222;
   margin: 60px auto;
-  width: 70%;
+  width: min(86%, 1120px);
+}
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 h1 {
   font-family: 'Helvetica', 'Arial', sans-serif;
@@ -17,6 +23,10 @@ p, ol, ul {
   font-size: 1.25em;
   line-height: 1.4em;
   color: #333;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 ol ul {
   list-style-type: disc;
@@ -61,17 +71,20 @@ IMAGE TEXT PAIR
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 100px;
+  gap: clamp(1.5rem, 5vw, 4rem);
   width: 100%;
 }
 .image-text-pair img {
-  flex: 1 1 auto;
-  width: 600px;
+  flex: 0 1 58%;
+  min-width: 0;
+  width: 100%;
+  max-width: 600px;
   height: auto;
   display: block;
 }
 .pair-text {
-  flex: 1 1 auto;
+  flex: 1 1 280px;
+  min-width: 0;
 }
 /* Right-aligned variant using a class */
 .image-text-pair.align-right {
@@ -82,7 +95,7 @@ WRITING
    =============== */
 .writing-layout {
   display: grid;
-  grid-template-columns: 1fr 350px; /* Content takes the rest, sidebar is 250px */
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 350px);
   gap: 4rem; /* Space between the poem and the menu */
   align-items: start;
 }
@@ -135,7 +148,7 @@ IMAGE GALLERY CLASS
 /* Container for all gallery links */
 .gallery-index {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: 2rem;
   padding: 2rem 0;
 }
@@ -229,10 +242,12 @@ nav ul, footer ul {
   padding: 0;
   list-style: none;   /* no dots or bullets */
   font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
 }
 nav ul li, footer ul li {
   display: inline;    /* horizontally arranged list */
-  margin-right: 20px; /* space between list items */
 }
 /* ===============
 CONTACT FORM
@@ -295,5 +310,99 @@ CONTACT FORM
   .newsletter-form {
     flex-direction: column;
     align-items: stretch;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 28px auto;
+    width: 100%;
+    padding: 0 18px;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: 1.45rem;
+    line-height: 1.2;
+  }
+
+  p, ol, ul {
+    font-size: 1.05rem;
+    line-height: 1.55;
+  }
+
+  nav ul, footer ul {
+    gap: 0.65rem 1rem;
+    line-height: 1.2;
+  }
+
+  .image-text-pair,
+  .image-text-pair.align-right {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .image-text-pair img {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .writing-layout {
+    display: block;
+  }
+
+  .writing-sidebar {
+    position: static;
+    border-left: 0;
+    border-top: 1px solid currentColor;
+    margin-top: 2.5rem;
+    padding: 1.25rem 0 0;
+  }
+
+  .poem-text {
+    font-size: 1.05rem;
+  }
+
+  .indent-2 { padding-left: 1rem; }
+  .indent-3 { padding-left: 1.5rem; }
+  .indent-4 { padding-left: 2rem; }
+
+  .image-gallery {
+    column-count: 2;
+    column-gap: 0.6rem;
+  }
+
+  .gallery-index {
+    gap: 1.25rem;
+    padding: 1rem 0;
+  }
+
+  .newsletter-container {
+    margin: 3rem auto;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    margin-top: 22px;
+    padding: 0 14px;
+  }
+
+  h1 {
+    font-size: 1.85rem;
+  }
+
+  .image-gallery {
+    column-count: 1;
+  }
+
+  .book-grid {
+    gap: 2rem;
+    max-width: 260px;
   }
 }
