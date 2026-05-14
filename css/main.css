@@ -273,6 +273,28 @@ footer ul {
 }
 
 /* ===============
+   STUDIO PAGE
+   =============== */
+.studio-page h2 {
+  margin: 4rem 0 1rem;
+}
+
+.studio-page h2:first-of-type {
+  margin-top: 3rem;
+}
+
+.studio-page .video-container,
+.studio-page .book-grid {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.studio-page blockquote {
+  margin: 3rem auto;
+  max-width: 760px;
+}
+
+/* ===============
    CONTACT FORM
    =============== */
 .newsletter-container {
@@ -427,6 +449,20 @@ footer ul {
 
   .book-item img {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+  }
+
+  .studio-page h2 {
+    margin-top: 3rem;
+  }
+
+  .studio-page .video-container,
+  .studio-page .book-grid {
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .studio-page blockquote {
+    margin: 2.5rem 0;
   }
 
   .newsletter-container {
