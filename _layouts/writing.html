@@ -1,10 +1,22 @@
 ---
 layout: default
 ---
+{% capture signature %}
+<div markdown="1">
+---
+Kristoff Malejczuk <br>
+{{ page.date }}
+</div>
+{% endcapture %}
+
 <div class="writing-layout" markdown="1">
 <article class="writing-content" markdown="1">
   <h2 style="margin-bottom: 0;">{{ page.title }}</h2>
   {{ content }}
+
+  <div class="sig-wrapper">
+    {{ signature | markdownify }}
+  </div>
 </article>
 
 <aside class="writing-sidebar">
@@ -12,16 +24,3 @@ layout: default
   {{ sidebar_content | markdownify }}
 </aside>
 </div>
-
-{% capture signature %}
-
-<div markdown="1">
----
-Kristoff Malejczuk <br>
-{{ page.date }}
-{% endcapture %}
-
-<div class="sig-wrapper">
-  {{ signature | markdownify }}
-</div>
-<div>
