@@ -70,6 +70,71 @@ ol ul {
   list-style-type: disc;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0 3rem;
+}
+
+th,
+td {
+  padding: 0.75rem 0.8rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.american-table table {
+  table-layout: fixed;
+}
+
+.american-table th:nth-child(1),
+.american-table td:nth-child(1) {
+  width: 12%;
+}
+
+.american-table th:nth-child(2),
+.american-table td:nth-child(2) {
+  width: 42%;
+}
+
+.american-table th:nth-child(3),
+.american-table td:nth-child(3) {
+  width: 32%;
+}
+
+.american-table th:nth-child(4),
+.american-table td:nth-child(4) {
+  width: 14%;
+}
+
+.page-toc {
+  margin: 1.5rem 0 3rem;
+  padding-left: 1.5rem;
+  border-left: 1px solid currentColor;
+}
+
+.page-toc h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+}
+
+.page-toc p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
 /* ===============
    HEADER AND FOOTER
    =============== */
@@ -386,6 +451,15 @@ footer ul {
   footer ul {
     gap: 0.65rem 1rem;
     line-height: 1.2;
+  }
+
+  table {
+    min-width: 760px;
+  }
+
+  th,
+  td {
+    padding: 0.65rem 0.7rem;
   }
 
   .image-text-pair,
