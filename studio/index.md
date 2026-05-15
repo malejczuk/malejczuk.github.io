@@ -8,18 +8,20 @@ title: The Studio
 # The Studio with Kristoff Malejczuk 
 
 The Studio is an organic, evolving project that has taken several forms:
-* [Literature Project / Youtube](#youtube-project) (2026-ongoing)
+* [Literature Project / Youtube](#literature-project) (2026-ongoing)
 * [Entertainment Show / Podcast](#entertainment-show) (2020-2021)
 * [Poem](#poem) (2020)
 
 ## Literature Project
+
 In its current iteration, The Studio is a [YouTube channel](https://www.youtube.com/@thestudiowithkristoff) capturing my exploration of different literary traditions.
 The primary aim of this project, as with all versions of The Studio, is the expression of self, and this is hopefully realized in a way that is equal parts entertaining and informative.
 
 {% include youtube.html id="C-RX0yIU0Q0" %}
 
-I am currently working through a reading list of French Realism.
-For more on what I'm reading, and to follow along, click here for my [booklists]({{ '/studio/booklists' | relative_url }}).
+For more on what I'm reading, and to follow along, [see here for my booklists.]({{ '/studio/booklists' | relative_url }})
+
+I am currently working through a reading list of [French Realism:]({{ '/studio/booklists/#franco-russian-realism' | relative_url }})
 
 <div class="book-grid">
   <div class="book-item">
