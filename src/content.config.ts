@@ -31,6 +31,8 @@ const photography = defineCollection({
 		gallery_folder: z.string(),
 		/** Photo under src/images/ shown on the Photography index card. */
 		cover_image: z.string(),
+		/** Description of each photo for screen readers and image search, by file name. */
+		alt: z.record(z.string(), z.string()).default({}),
 	}),
 });
 

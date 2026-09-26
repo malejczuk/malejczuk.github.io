@@ -24,9 +24,9 @@ export function image(path: string): WebImage {
 }
 
 /** Web versions of every original directly inside a src/images/ folder, in filename order. */
-export function imagesIn(folder: string): WebImage[] {
+export function imagesIn(folder: string): (WebImage & { name: string })[] {
 	const prefix = `${folder.replace(/\/$/, '')}/`;
 	const paths = Object.keys(images).filter((p) => p.startsWith(prefix) && !p.slice(prefix.length).includes('/'));
 	if (paths.length === 0) throw new Error(`No images in src/images/${folder}.`);
-	return paths.sort().map(image);
+	return paths.sort().map((path) => ({ ...image(path), name: path.slice(prefix.length) }));
 }
