@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BaseLayout.astro
 title: The Studio
-description: "The Studio is an organic, evolving project that has taken several forms: a YouTube literature project, an entertainment show and podcast, and a poem."
+description: "The Studio is an organic, evolving project that has taken several forms."
 ---
 
 <div class="studio-page">

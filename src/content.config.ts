@@ -8,8 +8,8 @@ const writing = defineCollection({
 		title: z.string(),
 		/** Shown verbatim under the signature, e.g. "May 21, 2020" or "February 14-15, 2025". */
 		date: z.string(),
-		/** One or two sentences shown under the link in search results and link previews. */
-		description: z.string(),
+		/** Shown under the link in search results and link previews, e.g. the opening lines. */
+		description: z.string().optional(),
 		/** Language of the piece, if not English, e.g. "es". */
 		lang: z.string().optional(),
 		/**
@@ -24,7 +24,7 @@ const photography = defineCollection({
 	loader: glob({ pattern: '*.md', base: './src/content/photography' }),
 	schema: z.object({
 		title: z.string(),
-		/** Shown in search results and link previews; defaults to the caption plus "Shot on …". */
+		/** Shown in search results and link previews; defaults to the caption, if any. */
 		description: z.string().optional(),
 		shot_on: z.string().optional(),
 		/** Folder under src/images/ holding the gallery's photos, e.g. "photography/azores". */

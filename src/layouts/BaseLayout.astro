@@ -10,7 +10,7 @@ interface Props {
 	/** Preview image for shared links; defaults to DEFAULT_SHARE_IMAGE. */
 	image?: ShareImage;
 	/** Set automatically when a Markdown page uses this as its `layout`. */
-	frontmatter?: { title: string; description: string; share_image?: string; share_image_alt?: string };
+	frontmatter?: { title: string; description?: string; share_image?: string; share_image_alt?: string };
 }
 
 const {
@@ -21,7 +21,6 @@ const {
 	image = frontmatter?.share_image ? { path: frontmatter.share_image, alt: frontmatter.share_image_alt ?? title! } : undefined,
 } = Astro.props;
 if (!title) throw new Error(`Missing title for ${Astro.url.pathname}`);
-if (!description) throw new Error(`Missing description for ${Astro.url.pathname}`);
 ---
 <!DOCTYPE html>
 <html lang="en">

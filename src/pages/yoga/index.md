@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BaseLayout.astro
 title: Yoga
-description: "Come to a class! I teach Hatha Vinyasa and Hatha Fuerza every week at Adarsha Yoga in Barcelona."
+description: "I teach three weekly classes at Adarsha Yoga."
 ---
 
 # Yoga

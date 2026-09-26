@@ -11,8 +11,8 @@ export interface ShareImage {
 
 interface Props {
 	title: string;
-	/** One or two sentences shown under the link in search results and link previews. */
-	description: string;
+	/** Shown under the link in search results and link previews. Without one, search engines pick text from the page. */
+	description?: string;
 	/** Writing date as shown on the page, e.g. "May 21, 2020" or "February 14-15, 2025". */
 	date?: string;
 	image?: ShareImage;
@@ -46,7 +46,6 @@ const home = new URL('/', Astro.site).href;
 const author = { '@type': 'Person', '@id': `${home}#person`, name: PERSON.name, url: home };
 const person = {
 	...author,
-	description: PERSON.description,
 	image: new URL(webImage(PERSON.image).src, Astro.site).href,
 	sameAs: PERSON.sameAs,
 };
@@ -77,10 +76,10 @@ const { '@context': context, ...pageNode } = page;
 const jsonLd = isHome ? { '@context': context, '@graph': [pageNode, person] } : page;
 ---
 <title>{title} | {SITE_TITLE}</title>
-<meta name="description" content={description} />
+{description && <meta name="description" content={description} />}
 <meta name="generator" content={Astro.generator} />
 <meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
+{description && <meta property="og:description" content={description} />}
 <meta name="author" content={AUTHOR} />
 <meta property="og:locale" content="en_US" />
 <link rel="canonical" href={url} />
@@ -94,5 +93,5 @@ const jsonLd = isHome ? { '@context': context, '@graph': [pageNode, person] } : 
 <meta property="og:image:alt" content={image.alt} />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
-<meta name="twitter:description" content={description} />
+{description && <meta name="twitter:description" content={description} />}
 <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

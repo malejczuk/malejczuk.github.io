@@ -6,7 +6,7 @@ import { image } from '../../lib/images';
 const galleries = (await getCollection('photography')).sort((a, b) => (a.id < b.id ? -1 : 1));
 const photo = image('photography/albania-pentax.jpg');
 ---
-<BaseLayout title="Photography" description="My photographs from Peru, Chile, the Azores and Catalunya, on film and on my phone. Contact me for prints and licensing.">
+<BaseLayout title="Photography">
 <h1 id="photography">Photography</h1>
 
 <div class="gallery-index">
@@ -31,7 +31,7 @@ const photo = image('photography/albania-pentax.jpg');
 <p><a href="mailto:kristoff@thestudio.uno">Contact me</a> for prints and licensing.</p>
 
 <figure class="photo-figure">
-  <img src={photo.src} width={photo.width} height={photo.height} loading="lazy" alt="Kristoff holding his Pentax camera on a hillside">
+  <img src={photo.src} width={photo.width} height={photo.height} loading="lazy" alt="Man holding a film camera on a sunny hillside">
   <figcaption>me with my Pentax in the South of Albania</figcaption>
 </figure>
 </BaseLayout>

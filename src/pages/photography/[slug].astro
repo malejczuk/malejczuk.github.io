@@ -10,10 +10,8 @@ export async function getStaticPaths() {
 
 const { gallery } = Astro.props;
 const { title, shot_on, gallery_folder, cover_image, alt } = gallery.data;
-// Defaults to the gallery's caption (the text under its title), or where it's from, then what it was shot on.
-const caption = gallery.body?.trim().replace(/\s+/g, ' ');
-const shotOn = shot_on ? `Shot on ${shot_on}.` : '';
-const description = gallery.data.description ?? [caption || `My photographs from ${title}.`, shotOn].filter(Boolean).join(' ');
+// Defaults to the gallery's caption (the text under its title), if it has one.
+const description = gallery.data.description ?? (gallery.body?.trim().replace(/\s+/g, ' ') || undefined);
 const { Content } = await render(gallery);
 ---
 <BaseLayout title={title} description={description} image={{ path: cover_image, alt: title }}>

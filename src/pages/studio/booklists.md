@@ -1,7 +1,6 @@
 ---
 layout: ../../layouts/BaseLayout.astro
 title: Booklists
-description: "What I’m reading: 20th-century Hispanic literature, to improve my Spanish, and French and Russian realism for my YouTube Literature Project."
 ---
 
 # Booklists
