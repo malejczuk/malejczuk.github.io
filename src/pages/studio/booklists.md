@@ -58,3 +58,5 @@ I will read English translations of the Russian works.
 | 7 | <span class="unread">_Anna Karenina_</span> | Leo Tolstoy | 🇷🇺 Russia | 1877 |
 
 </div>
+
+<p class="booklist-note">Unread books are greyed out.</p>
