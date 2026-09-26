@@ -94,6 +94,11 @@ th {
   overflow-x: auto;
 }
 
+/* Booklists: dim the rows of books not yet read (titles wrapped in <span class="unread">) */
+tr:has(.unread) td {
+  opacity: 0.45;
+}
+
 .page-toc {
   margin: 1.5rem 0 3rem;
   padding-left: 1.5rem;

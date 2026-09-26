@@ -22,6 +22,8 @@ npm run preview   # build, then serve dist/ the way Cloudflare will
 | Styles | `public/css/main.css` |
 | Images and favicon | `public/assets/` |
 
+In the booklists, books you haven't read yet have their title wrapped in `<span class="unread">…</span>`, which fades the row. When you finish one, remove the wrapper.
+
 A new `.md` file in `src/content/writing/` becomes `/writing/<filename>`, and one in `src/content/photography/` becomes `/photography/<filename>`, with every image in its `gallery_folder` shown in filename order.
 
 ## Deploy
