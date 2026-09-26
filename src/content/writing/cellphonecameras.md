@@ -1,6 +1,7 @@
 ---
 title: Cell Phone Cameras
 date: May 6, 2026
+description: "Kristoff Malejczuk, who used to make cell phone cameras, on phone cameras, process, and why he also shoots on film."
 ---
 
 I used to make cell phone cameras for a living.

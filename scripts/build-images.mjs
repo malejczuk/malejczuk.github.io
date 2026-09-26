@@ -3,6 +3,7 @@
 // For each original it writes to public/img/ (mirroring the folder structure):
 //   <name>.webp        at most 2000px on the long side, for pages and the lightbox
 //   <name>-thumb.webp  800px wide, for gallery grids and cards
+//   <name>-share.jpg   1200x630, the preview shown when a page is shared (JPEG, which every app accepts)
 // Each file is rotated upright, converted to sRGB, stripped of all metadata (including GPS)
 // and tagged with an Artist and Copyright notice.
 //
@@ -24,7 +25,8 @@ const REDIRECTS = join(ROOT, 'public/_redirects');
 
 const LARGE = 2000;
 const THUMB = 800;
-const QUALITY = { large: 82, thumb: 78 };
+const SHARE = { width: 1200, height: 630 };
+const QUALITY = { large: 82, thumb: 78, share: 80 };
 const EXIF = {
 	IFD0: {
 		Artist: 'Kristoff Malejczuk',
@@ -32,7 +34,7 @@ const EXIF = {
 	},
 };
 // Bump when the settings above change, so every image is regenerated.
-const VERSION = 1;
+const VERSION = 2;
 
 const IMAGE = /\.(jpe?g|png)$/i;
 
@@ -54,13 +56,10 @@ async function walk(dir, pattern = /./) {
 	return files.flat();
 }
 
-async function render(input, output, resize, quality) {
-	const info = await sharp(input)
-		.rotate()
-		.resize(resize)
-		.webp({ quality })
-		.withExif(EXIF)
-		.toFile(output);
+async function render(input, output, resize, format) {
+	const image = sharp(input).rotate().resize(resize);
+	const encoded = format === 'jpeg' ? image.jpeg({ quality: QUALITY.share, mozjpeg: true }) : image.webp(format);
+	const info = await encoded.withExif(EXIF).toFile(output);
 	return { width: info.width, height: info.height };
 }
 
@@ -80,16 +79,19 @@ async function processImage(file) {
 
 	const large = join(OUT, `${name}.webp`);
 	const thumb = join(OUT, `${name}-thumb.webp`);
+	const share = join(OUT, `${name}-share.jpg`);
 	const { mtimeMs } = await stat(file);
 	const cached = reuse[path];
-	if (cached && cached.mtimeMs === mtimeMs && existsSync(large) && existsSync(thumb)) {
+	if (cached && cached.mtimeMs === mtimeMs && [large, thumb, share].every((f) => existsSync(f))) {
 		images[path] = cached;
 		return;
 	}
 
 	await mkdir(dirname(large), { recursive: true });
-	const big = await render(file, large, { width: LARGE, height: LARGE, fit: 'inside', withoutEnlargement: true }, QUALITY.large);
-	const small = await render(file, thumb, { width: THUMB, withoutEnlargement: true }, QUALITY.thumb);
+	const big = await render(file, large, { width: LARGE, height: LARGE, fit: 'inside', withoutEnlargement: true }, { quality: QUALITY.large });
+	const small = await render(file, thumb, { width: THUMB, withoutEnlargement: true }, { quality: QUALITY.thumb });
+	// Crop to the most interesting region (faces, detail) rather than the centre.
+	await render(file, share, { ...SHARE, fit: 'cover', position: sharp.strategy.attention }, 'jpeg');
 	images[path] = {
 		src: `/img/${name}.webp`,
 		width: big.width,
@@ -97,6 +99,7 @@ async function processImage(file) {
 		thumb: `/img/${name}-thumb.webp`,
 		thumbWidth: small.width,
 		thumbHeight: small.height,
+		share: `/img/${name}-share.jpg`,
 		mtimeMs,
 	};
 	built++;
@@ -111,7 +114,7 @@ await Promise.all(
 );
 
 // Remove outputs whose original was deleted or renamed.
-const expected = new Set(Object.values(images).flatMap((i) => [i.src, i.thumb].map((u) => join(ROOT, 'public', u))));
+const expected = new Set(Object.values(images).flatMap((i) => [i.src, i.thumb, i.share].map((u) => join(ROOT, 'public', u))));
 for (const file of existsSync(OUT) ? await walk(OUT) : []) {
 	if (!expected.has(file)) await rm(file);
 }

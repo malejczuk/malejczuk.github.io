@@ -1,6 +1,8 @@
 ---
 title: Cristo Pie
 date: April 16, 2026
+description: "“Cristo Pie”, a short story in Spanish by Kristoff Malejczuk, Barcelona, 2026."
+lang: es
 ---
 
 Es el año 2934 y el programa más popular es Irrealidad, un show en el que la conciencia humana del concursante es teletransportada a dimensiones alternativas, donde su experiencia vivida es transmitida a una audiencia cautiva de diez mil millones de personas. Julián recibe con horror la noticia de que es el concursante elegido para el próximo episodio. Que me ayude, Dios, reza. No quiere saber nada de ese ritual demoníaco, pero no existe el derecho a rechazar la invitación. Se arrodilla con su mujer la noche antes de su viaje a la capital. Su bebé duerme tranquilo. Su mujer llora.

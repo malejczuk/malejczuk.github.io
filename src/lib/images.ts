@@ -10,6 +10,8 @@ export interface WebImage {
 	thumb: string;
 	thumbWidth: number;
 	thumbHeight: number;
+	/** 1200x630 JPEG for link previews. */
+	share: string;
 }
 
 const images: Record<string, WebImage> = manifest.images;

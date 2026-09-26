@@ -1,6 +1,7 @@
 ---
 title: Farewell
 date: January 16, 2024
+description: "Kristoff Malejczuk’s farewell letter to his colleagues on leaving his camera hardware engineering job at Apple in January 2024."
 ---
 
 <p>From: Kristoff Malejczuk [kristoff@apple.com] <br>

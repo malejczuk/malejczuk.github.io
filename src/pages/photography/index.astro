@@ -6,7 +6,7 @@ import { image } from '../../lib/images';
 const galleries = (await getCollection('photography')).sort((a, b) => (a.id < b.id ? -1 : 1));
 const photo = image('photography/albania-pentax.jpg');
 ---
-<BaseLayout title="Photography">
+<BaseLayout title="Photography" description="Photography by Kristoff Malejczuk on film and phone, from Peru, Chile, the Azores and Catalunya. Prints and licensing available.">
 <h1 id="photography">Photography</h1>
 
 <div class="gallery-index">

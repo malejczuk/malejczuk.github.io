@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/BaseLayout.astro
 title: Booklists
+description: "Kristoff Malejczuk’s reading lists: 20th-century Hispanic literature and Franco-Russian realism, with what he has read and is reading."
 ---
 
 # Booklists

@@ -8,6 +8,10 @@ const writing = defineCollection({
 		title: z.string(),
 		/** Shown verbatim under the signature, e.g. "May 21, 2020" or "February 14-15, 2025". */
 		date: z.string(),
+		/** One or two sentences shown under the link in search results and link previews. */
+		description: z.string(),
+		/** Language of the piece, if not English, e.g. "es". */
+		lang: z.string().optional(),
 		/**
 		 * Output the body as-is instead of rendering it as Markdown. Use this for HTML that
 		 * must keep its blank lines and indentation, like a `<div class="poem-text">` poem.
@@ -20,6 +24,8 @@ const photography = defineCollection({
 	loader: glob({ pattern: '*.md', base: './src/content/photography' }),
 	schema: z.object({
 		title: z.string(),
+		/** Shown in search results and link previews; defaults to "Photographs of <title> …". */
+		description: z.string().optional(),
 		shot_on: z.string().optional(),
 		/** Folder under src/images/ holding the gallery's photos, e.g. "photography/azores". */
 		gallery_folder: z.string(),

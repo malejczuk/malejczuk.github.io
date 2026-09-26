@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/BaseLayout.astro
 title: The Studio
+description: "The Studio with Kristoff Malejczuk: a YouTube literature project, a 2020–2021 podcast, and the poem that gave it its name."
 ---
 
 <div class="studio-page">

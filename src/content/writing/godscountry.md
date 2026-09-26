@@ -1,6 +1,7 @@
 ---
 title: God’s Country
 date: December 2, 2023
+description: "“God’s Country”, a short prose piece by Kristoff Malejczuk on abundance, labour and gratitude, written between San Francisco and New York in 2023."
 ---
 
 Endless plains unfold beneath me. I see freedom in the cracked earth. God’s country, undamaged by the conditioned expectations of perpetual abundance.

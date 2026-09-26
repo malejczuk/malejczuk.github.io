@@ -1,17 +1,27 @@
 ---
 import '@fontsource/open-sans/400.css';
 import Analytics from '../components/Analytics.astro';
-import Seo from '../components/Seo.astro';
+import Seo, { type ShareImage } from '../components/Seo.astro';
 
 interface Props {
 	title?: string;
+	description?: string;
 	date?: string;
+	/** Preview image for shared links; defaults to DEFAULT_SHARE_IMAGE. */
+	image?: ShareImage;
 	/** Set automatically when a Markdown page uses this as its `layout`. */
-	frontmatter?: { title: string };
+	frontmatter?: { title: string; description: string; share_image?: string; share_image_alt?: string };
 }
 
-const { frontmatter, title = frontmatter?.title, date } = Astro.props;
+const {
+	frontmatter,
+	title = frontmatter?.title,
+	description = frontmatter?.description,
+	date,
+	image = frontmatter?.share_image ? { path: frontmatter.share_image, alt: frontmatter.share_image_alt ?? title! } : undefined,
+} = Astro.props;
 if (!title) throw new Error(`Missing title for ${Astro.url.pathname}`);
+if (!description) throw new Error(`Missing description for ${Astro.url.pathname}`);
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +29,7 @@ if (!title) throw new Error(`Missing title for ${Astro.url.pathname}`);
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<Seo title={title} date={date} />
+		<Seo title={title} description={description} date={date} image={image} />
 
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 		<link rel="icon" href="/assets/favicon.ico">

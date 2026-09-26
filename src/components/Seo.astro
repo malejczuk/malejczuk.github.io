@@ -1,14 +1,25 @@
 ---
-// Title, Open Graph and JSON-LD tags, matching what jekyll-seo-tag generated.
-import { AUTHOR, SITE_TITLE } from '../consts';
+// Title, description, link-preview (Open Graph / X) and JSON-LD tags.
+import { AUTHOR, DEFAULT_SHARE_IMAGE, SITE_TITLE } from '../consts';
+import { image as webImage } from '../lib/images';
+
+export interface ShareImage {
+	/** Photo under src/images/, e.g. "photography/azores/azores - 1.jpeg". */
+	path: string;
+	alt: string;
+}
 
 interface Props {
 	title: string;
+	/** One or two sentences shown under the link in search results and link previews. */
+	description: string;
 	/** Writing date as shown on the page, e.g. "May 21, 2020" or "February 14-15, 2025". */
 	date?: string;
+	image?: ShareImage;
 }
 
-const { title, date } = Astro.props;
+const { title, description, date, image = DEFAULT_SHARE_IMAGE } = Astro.props;
+const shareImage = new URL(webImage(image.path).share, Astro.site).href;
 
 // Canonical URLs are the ones Cloudflare serves: /writing/studio for writing/studio.html,
 // /studio/ for studio/index.html.
@@ -38,7 +49,9 @@ const jsonLd = published
 			author,
 			dateModified: published,
 			datePublished: published,
+			description,
 			headline: title,
+			image: shareImage,
 			mainEntityOfPage: { '@type': 'WebPage', '@id': url },
 			url,
 		}
@@ -46,14 +59,18 @@ const jsonLd = published
 			'@context': 'https://schema.org',
 			'@type': isHome ? 'WebSite' : 'WebPage',
 			author,
+			description,
 			headline: title,
+			image: shareImage,
 			...(isHome && { name: SITE_TITLE }),
 			url,
 		};
 ---
 <title>{title} | {SITE_TITLE}</title>
+<meta name="description" content={description} />
 <meta name="generator" content={Astro.generator} />
 <meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
 <meta name="author" content={AUTHOR} />
 <meta property="og:locale" content="en_US" />
 <link rel="canonical" href={url} />
@@ -61,6 +78,11 @@ const jsonLd = published
 <meta property="og:site_name" content={SITE_TITLE} />
 <meta property="og:type" content={published ? 'article' : 'website'} />
 {published && <meta property="article:published_time" content={published} />}
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content={title} />
+<meta property="og:image" content={shareImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={image.alt} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
 <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

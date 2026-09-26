@@ -9,12 +9,12 @@ export async function getStaticPaths() {
 }
 
 const { piece } = Astro.props;
-const { title, date, raw } = piece.data;
+const { title, date, description, lang, raw } = piece.data;
 const { Content } = await render(piece);
 ---
-<BaseLayout title={title} date={date}>
+<BaseLayout title={title} description={description} date={date}>
 <div class="writing-layout">
-<article class="writing-content">
+<article class="writing-content" lang={lang}>
   <h1 class="writing-title">{title}</h1>
   {raw ? <Fragment set:html={piece.body} /> : <Content />}
 

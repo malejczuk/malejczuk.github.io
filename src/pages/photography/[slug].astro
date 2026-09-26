@@ -9,10 +9,11 @@ export async function getStaticPaths() {
 }
 
 const { gallery } = Astro.props;
-const { title, shot_on, gallery_folder } = gallery.data;
+const { title, shot_on, gallery_folder, cover_image } = gallery.data;
+const description = gallery.data.description ?? `Photographs of ${title} by Kristoff Malejczuk${shot_on ? `, shot on ${shot_on}` : ''}.`;
 const { Content } = await render(gallery);
 ---
-<BaseLayout title={title}>
+<BaseLayout title={title} description={description} image={{ path: cover_image, alt: title }}>
 <div class="gallery-header">
 <h1>{title}</h1>
 {shot_on && <h3>Shot on: {shot_on}</h3>}

@@ -1,6 +1,7 @@
 ---
 title: Infinite Grace
 date: February 14-15, 2025
+description: "“Infinite Grace”, a poem by Kristoff Malejczuk written in El Valle in February 2025."
 ---
 
 <p>
