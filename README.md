@@ -16,7 +16,7 @@ npm run preview   # build, then serve dist/ the way Cloudflare will
 |---|---|
 | Writing pieces | `src/content/writing/*.md` (add new ones to `src/components/WritingMenu.md` too) |
 | Photo galleries | `src/content/photography/*.md`; images in `public/assets/photography/<folder>/` |
-| Studio, Booklists, Yoga, About | `src/pages/**/*.md` |
+| Studio, Booklists, Yoga | `src/pages/**/*.md` |
 | Home, Photography and Writing indexes | `src/pages/**/*.astro` |
 | Page shell (nav, footer, head) | `src/layouts/BaseLayout.astro` |
 | Styles | `public/css/main.css` |
