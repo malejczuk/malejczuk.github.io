@@ -51,7 +51,7 @@ Recognizing him as a teacher, I soon returned to devote **one month to the pract
 Next, I headed to the Amazon jungle, where I spent a month cradled by _la Madre Selva_, another master teacher.
 
 In late 2025, I moved to Barcelona and began practicing **Mysore-style Hatha Ashtanga** under Aleix Griñó at Viveka Yoga Shala.
-From 2026-2027, I am completing my second 200-hour teacher training, also at Viveka.
+From 2026-2027, I am completing **my second 200-hour teacher training**, also at Viveka.
 As of 2026, I began teaching regularly at Adarsha Yoga.
 In fall 2026, I completed my first 10-day Vipassana meditation retreat.
 
