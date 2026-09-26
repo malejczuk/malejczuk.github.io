@@ -202,6 +202,14 @@ footer ul {
   font-size: 0.9rem;
 }
 
+/* The page's main heading, sized like the h2 that writing pages used to have */
+.writing-title {
+  margin: 0.83em 0 0;
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: normal;
+}
+
 .poem-text {
   white-space: pre-wrap;
   font-family: inherit;
@@ -214,11 +222,11 @@ footer ul {
 
 /* Dialogue poems: one voice left-aligned, the other right-aligned */
 .poem-dialogue,
-.writing-content:has(.poem-dialogue) > h2 {
+.writing-content:has(.poem-dialogue) > .writing-title {
   max-width: 34rem;
 }
 
-.writing-content:has(.poem-dialogue) > h2 {
+.writing-content:has(.poem-dialogue) > .writing-title {
   text-align: center;
 }
 
@@ -521,6 +529,11 @@ footer ul {
 
   .writing-layout {
     display: block;
+  }
+
+  .writing-title {
+    font-size: 1.45rem;
+    line-height: 1.2;
   }
 
   .writing-sidebar {

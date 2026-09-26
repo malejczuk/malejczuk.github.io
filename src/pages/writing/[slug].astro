@@ -15,7 +15,7 @@ const { Content } = await render(piece);
 <BaseLayout title={title} date={date}>
 <div class="writing-layout">
 <article class="writing-content">
-  <h2 style="margin-bottom: 0;">{title}</h2>
+  <h1 class="writing-title">{title}</h1>
   {raw ? <Fragment set:html={piece.body} /> : <Content />}
 
   <div class="sig-wrapper">
