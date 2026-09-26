@@ -14,14 +14,13 @@ The Studio is an organic, evolving project that has taken several forms:
 
 ## Literature Project
 
+For more on what I'm reading, and to follow along, [see here for my booklists.](/studio/booklists)
 In its current iteration, The Studio is a [YouTube channel](https://www.youtube.com/@thestudiowithkristoff) capturing my exploration of different literary traditions.
 The primary aim of this project, as with all versions of The Studio, is the expression of self, and this is hopefully realized in a way that is equal parts entertaining and informative.
 
 <div class="video-container">
   <iframe src="https://www.youtube.com/embed/C-RX0yIU0Q0" frameborder="0" allowfullscreen></iframe>
 </div>
-
-For more on what I'm reading, and to follow along, [see here for my booklists.](/studio/booklists)
 
 I am currently working through a reading list of [French Realism:](/studio/booklists/#franco-russian-realism)
 
