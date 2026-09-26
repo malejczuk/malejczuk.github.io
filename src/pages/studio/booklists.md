@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BaseLayout.astro
 title: Booklists
-description: "What I’m reading, and what I’ve read: 20th-century Hispanic literature, to improve my Spanish, and French and Russian realism for my YouTube Literature Project."
+description: "What I’m reading: 20th-century Hispanic literature, to improve my Spanish, and French and Russian realism for my YouTube Literature Project."
 ---
 
 # Booklists
@@ -25,18 +25,18 @@ The booklist is ordered by the approximate difficulty of the prose.
 
 <div class="table-wrapper">
 
-| Status | # | Title | Author | Country | Year | Level |
-|---|---:|---|---|---|---:|---|
-| Read | 1 | _Como agua para chocolate_ | Laura Esquivel | 🇲🇽 Mexico | 1989 | B2 |
-| Read | 2 | _El Embrujo de Shanghai_ | Juan Marsé | 🇪🇸 Spain | 1993 | B2/C1 |
-| Read | 3 | _Nada_ | Carmen Laforet | 🇪🇸 Spain | 1945 | B2/C1 |
-| Read | 4 | _La tregua_ | Mario Benedetti | 🇺🇾 Uruguay | 1960 | B2/C1 |
-|  | 5 | _La Sombra del Viento_ | Carlos Ruiz Zafón | 🇪🇸 Spain | 2001 |B2/C1 |
-|  | 6 | _Crónica de una muerte anunciada_ | Gabriel García Márquez | 🇨🇴 Colombia | 1981 | B2/C1 |
-|  | 7 | _La colmena_ | Camilo José Cela | 🇪🇸 Spain | 1951 | C1 |
-|  | 8 | _Los detectives salvajes_ | Roberto Bolaño | 🇨🇱 Chile | 1998 | C1/C2 |
-|  | 9 | _Ficciones_ | Jorge Luis Borges | 🇦🇷 Argentina | 1944 | C1/C2 |
-|  | 10 | _Pedro Páramo_ | Juan Rulfo | 🇲🇽 Mexico | 1955 | C2 |
+| # | Title | Author | Country | Year | Level |
+|---:|---|---|---|---:|---|
+| 1 | _Como agua para chocolate_ | Laura Esquivel | 🇲🇽 Mexico | 1989 | B2 |
+| 2 | _El Embrujo de Shanghai_ | Juan Marsé | 🇪🇸 Spain | 1993 | B2/C1 |
+| 3 | _Nada_ | Carmen Laforet | 🇪🇸 Spain | 1945 | B2/C1 |
+| 4 | _La tregua_ | Mario Benedetti | 🇺🇾 Uruguay | 1960 | B2/C1 |
+| 5 | _La Sombra del Viento_ | Carlos Ruiz Zafón | 🇪🇸 Spain | 2001 |B2/C1 |
+| 6 | _Crónica de una muerte anunciada_ | Gabriel García Márquez | 🇨🇴 Colombia | 1981 | B2/C1 |
+| 7 | _La colmena_ | Camilo José Cela | 🇪🇸 Spain | 1951 | C1 |
+| 8 | _Los detectives salvajes_ | Roberto Bolaño | 🇨🇱 Chile | 1998 | C1/C2 |
+| 9 | _Ficciones_ | Jorge Luis Borges | 🇦🇷 Argentina | 1944 | C1/C2 |
+| 10 | _Pedro Páramo_ | Juan Rulfo | 🇲🇽 Mexico | 1955 | C2 |
 
 </div>
 
@@ -48,14 +48,14 @@ I will read English translations of the Russian works.
 
 <div class="table-wrapper">
 
-| Status | # | Title | Author | Country | Year |
-|---|---:|---|---|---|---:|
-| Reading | 1 | _Le Rouge et le Noir_ | Stendhal | 🇫🇷 France | 1830 |
-|  | 2 | _Le Père Goriot_ | Honoré de Balzac | 🇫🇷 France | 1835 |
-|  | 3 | _Madame Bovary_ | Gustave Flaubert | 🇫🇷 France | 1857 |
-|  | 4 | _Dead Souls_ | Nikolai Gogol | 🇷🇺 Russia | 1842 |
-|  | 5 | _Fathers and Sons_ | Ivan Turgenev | 🇷🇺 Russia | 1862 |
-|  | 6 | _Crime and Punishment_ | Fyodor Dostoevsky | 🇷🇺 Russia | 1866 |
-|  | 7 | _Anna Karenina_ | Leo Tolstoy | 🇷🇺 Russia | 1877 |
+| # | Title | Author | Country | Year |
+|---:|---|---|---|---:|
+| 1 | _Le Rouge et le Noir_ | Stendhal | 🇫🇷 France | 1830 |
+| 2 | _Le Père Goriot_ | Honoré de Balzac | 🇫🇷 France | 1835 |
+| 3 | _Madame Bovary_ | Gustave Flaubert | 🇫🇷 France | 1857 |
+| 4 | _Dead Souls_ | Nikolai Gogol | 🇷🇺 Russia | 1842 |
+| 5 | _Fathers and Sons_ | Ivan Turgenev | 🇷🇺 Russia | 1862 |
+| 6 | _Crime and Punishment_ | Fyodor Dostoevsky | 🇷🇺 Russia | 1866 |
+| 7 | _Anna Karenina_ | Leo Tolstoy | 🇷🇺 Russia | 1877 |
 
 </div>
