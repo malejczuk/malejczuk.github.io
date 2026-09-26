@@ -1,7 +1,7 @@
 ---
 title: Sonnet
 date: July 5, 2020
-description: "“Sonnet”, a poem about time by Kristoff Malejczuk, written in San Francisco in 2020."
+description: "How shocked am I to feel the Sun’s sharp rays, / Perplexed I question where did Winter go?"
 ---
 
 How shocked am I to feel the Sun's sharp rays, <br>

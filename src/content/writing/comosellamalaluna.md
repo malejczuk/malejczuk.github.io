@@ -1,7 +1,7 @@
 ---
 title: Cómo se llama la luna
 date: September 23, 2026
-description: "“Cómo se llama la luna”, a poem in dialogue, in Spanish, by Kristoff Malejczuk, Barcelona, 2026."
+description: "¿Cómo se llama la luna? / La luna se llama Laia / ¿Y cómo lo sabes? / Una noche me lo murmuró"
 lang: es
 raw: true
 ---

@@ -1,7 +1,7 @@
 ---
 title: The Bathing Hole
 date: April 22, 2022
-description: "“The Bathing Hole”, a poem by Kristoff Malejczuk written in Boulder in 2022."
+description: "Strong currents flooded me from San Francisco. / I rode the wave, keen to be carried along."
 raw: true
 ---
 

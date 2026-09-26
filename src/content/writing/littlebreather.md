@@ -1,7 +1,7 @@
 ---
 title: Little Breather
 date: September 29, 2023
-description: "“Little Breather”, a rhyming poem by Kristoff Malejczuk, San Francisco, 2023."
+description: "So I’m at this party / And I decide to take a little breather / I head outdoors to the yard"
 ---
 
 So I’m at this party <br>

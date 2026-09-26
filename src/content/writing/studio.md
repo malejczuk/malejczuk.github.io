@@ -1,7 +1,7 @@
 ---
 title: The Studio
 date: May 21, 2020
-description: "“The Studio”, a poem by Kristoff Malejczuk written in San Francisco on his 23rd birthday in 2020, and the origin of the name The Studio."
+description: "My mind is unwritten music / And a million notes played at once: / A blank stave overflowing."
 ---
 
 My mind is unwritten music <br>

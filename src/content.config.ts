@@ -24,7 +24,7 @@ const photography = defineCollection({
 	loader: glob({ pattern: '*.md', base: './src/content/photography' }),
 	schema: z.object({
 		title: z.string(),
-		/** Shown in search results and link previews; defaults to "Photographs of <title> …". */
+		/** Shown in search results and link previews; defaults to the caption plus "Shot on …". */
 		description: z.string().optional(),
 		shot_on: z.string().optional(),
 		/** Folder under src/images/ holding the gallery's photos, e.g. "photography/azores". */

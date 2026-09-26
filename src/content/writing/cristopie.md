@@ -1,7 +1,7 @@
 ---
 title: Cristo Pie
 date: April 16, 2026
-description: "“Cristo Pie”, a short story in Spanish by Kristoff Malejczuk, Barcelona, 2026."
+description: "Es el año 2934 y el programa más popular es Irrealidad, un show en el que la conciencia humana del concursante es teletransportada a dimensiones alternativas."
 lang: es
 ---
 

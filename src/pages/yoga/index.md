@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BaseLayout.astro
 title: Yoga
-description: "Hatha Vinyasa and Hatha Fuerza classes with Kristoff Malejczuk at Adarsha Yoga in Barcelona: weekly schedule and his path of yoga."
+description: "Come to a class! I teach Hatha Vinyasa and Hatha Fuerza every week at Adarsha Yoga in Barcelona."
 ---
 
 # Yoga
