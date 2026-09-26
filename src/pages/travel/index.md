@@ -14,20 +14,20 @@ If you have any questions, reach out to me.
 
 ## 2024
 
-### Mexico
+### Mexico (3 weeks)
 
 * Oaxaca
 * San José del Pacífico
 * Mazunte
 * San Cristóbal de las Casas
 
-### Guatemala
+### Guatemala (2.5 weeks)
 
 * Xela
 * Lago Atitlán
 * Antigua Guatemala
 
-### Mexico
+### Mexico (6.5 weeks)
 
 * CDMX
 * Guanajuato
@@ -44,7 +44,7 @@ If you have any questions, reach out to me.
 
 ## 2025
 
-### Colombia
+### Colombia (4.5 months)
 
 * Bogotá
 * Medellín
@@ -69,7 +69,7 @@ If you have any questions, reach out to me.
 * Santa Sofia
 * Puerto Nariño
 
-### Peru
+### Peru (3 months)
 
 * Caballococha
 * Lancha: Leticia a Iquitos
@@ -90,7 +90,7 @@ If you have any questions, reach out to me.
 * Cusco
 * Arequipa
 
-### Chile
+### Chile (5.5 weeks)
 
 * Arica
 * Iquique
