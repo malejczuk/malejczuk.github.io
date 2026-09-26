@@ -94,30 +94,6 @@ th {
   overflow-x: auto;
 }
 
-.american-table table {
-  table-layout: fixed;
-}
-
-.american-table th:nth-child(1),
-.american-table td:nth-child(1) {
-  width: 12%;
-}
-
-.american-table th:nth-child(2),
-.american-table td:nth-child(2) {
-  width: 42%;
-}
-
-.american-table th:nth-child(3),
-.american-table td:nth-child(3) {
-  width: 32%;
-}
-
-.american-table th:nth-child(4),
-.american-table td:nth-child(4) {
-  width: 14%;
-}
-
 .page-toc {
   margin: 1.5rem 0 3rem;
   padding-left: 1.5rem;
@@ -235,6 +211,23 @@ footer ul {
 .indent-2 { padding-left: 2rem; }
 .indent-3 { padding-left: 3rem; }
 .indent-4 { padding-left: 4rem; }
+
+/* Dialogue poems: one voice left-aligned, the other right-aligned */
+.poem-dialogue {
+  max-width: 34rem;
+}
+
+.poem-dialogue span {
+  display: block;
+}
+
+.poem-dialogue .right {
+  text-align: right;
+}
+
+.poem-dialogue .stanza-break {
+  text-align: center;
+}
 
 /* ===============
    GALLERIES

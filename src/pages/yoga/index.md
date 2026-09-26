@@ -12,13 +12,13 @@ title: Yoga
 <div class="pair-text">
 
 ## Teaching in Barcelona
-I teach two weekly classes at **Espai Adarsha**:
-* **Wednesdays, 2:15-3:15pm** -- Hatha Vinyasa Lunchtime Flow
-* **Fridays, 5-6pm** -- Hatha Vinyasa Strength and Mobility
+I teach three weekly classes at **Adarsha Yoga**:
+* **Mondays, 08:30-09:30** -- Hatha Vinyasa
+* **Wednesdays, 20:00-21:15** -- Hatha Vinyasa
+* **Fridays, 17:15-18:15** -- Hatha Fuerza
 
 Come to a class!
-See the [studio website](https://www.espaiadarsha.com/yoga) or contact me directly for more information.
-The studio is located near the Verdaguer (L4/L5) metro station in the Eixample/Gràcia neighbourhood.
+See the [studio website](https://adarshayoga.es/yoga/) or contact me directly for more information.
 
 </div>
 </div>
@@ -51,7 +51,9 @@ Recognizing him as a teacher, I soon returned to devote **one month to the pract
 Next, I headed to the Amazon jungle, where I spent a month cradled by _la Madre Selva_, another master teacher.
 
 In late 2025, I moved to Barcelona and began practicing **Mysore-style Hatha Ashtanga** under Aleix Griñó at Viveka Yoga Shala.
-As of 2026, I teach regularly at Espai Adarsha, also in Barcelona.
+From 2026-2027, I am completing my second 200-hour teacher training, also at Viveka.
+As of 2026, I began teaching regularly at Adarsha Yoga.
+In fall 2026, I completed my first 10-day Vipassana meditation retreat.
 
 </div>
 </div>
