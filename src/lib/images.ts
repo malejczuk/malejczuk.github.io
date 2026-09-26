@@ -16,7 +16,7 @@ export interface WebImage {
 
 const images: Record<string, WebImage> = manifest.images;
 
-/** Web versions of one original, by its path under src/images/, e.g. "home/IMG_3853.JPG". */
+/** Web versions of one original, by its path under src/images/, e.g. "home/000042.JPG". */
 export function image(path: string): WebImage {
 	const found = images[path];
 	if (!found) throw new Error(`No image src/images/${path} (or run \`npm run images\` to generate it).`);

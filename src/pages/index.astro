@@ -3,13 +3,13 @@ import ContactForm from '../components/ContactForm.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { image } from '../lib/images';
 
-const portrait = image('home/IMG_3853.JPG');
+const portrait = image('home/000042.JPG');
 ---
 <BaseLayout title="Welcome" description="My name is Kristoff and I live in Barcelona.">
 <h1 id="welcome-to-the-studio">Welcome to The Studio.</h1>
 
 <div class="image-text-pair home-intro">
-  <p><img src={portrait.src} width={portrait.width} height={portrait.height} alt="Kristoff in Montsant" /></p>
+  <p><img src={portrait.src} width={portrait.width} height={portrait.height} alt="Kristoff inspecting his camera in an Albanian hotel room" /></p>
   <div class="pair-text">
     <h2 id="my-name-is-kristoff-and-i-live-in-barcelona">My name is Kristoff and I live in Barcelona.</h2>
 
