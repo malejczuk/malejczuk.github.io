@@ -7,7 +7,7 @@ title: Yoga
 
 <div class="image-text-pair yoga-section yoga-teaching">
 
-![Kristoff practicing yoga](/assets/yoga/IMG_4261.JPG)
+![Kristoff practicing yoga](/img/yoga/img_4261.webp)
 
 <div class="pair-text">
 
@@ -25,7 +25,7 @@ See the [studio website](https://adarshayoga.es/yoga/) or contact me directly fo
 
 <div class="image-text-pair yoga-section align-right">
 
-![Kristoff teaching yoga](/assets/yoga/0K4A0226.jpg)
+![Kristoff teaching yoga](/img/yoga/0k4a0226.webp)
 
 <div class="pair-text">
 

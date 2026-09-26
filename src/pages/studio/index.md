@@ -26,15 +26,15 @@ I am currently working through a reading list of [French Realism:](/studio/bookl
 
 <div class="book-grid">
   <div class="book-item">
-    <img src="/assets/book-covers/le-rouge-et-le-noir.jpg" alt="Le Rouge et Le Noir book cover">
+    <img src="/img/book-covers/le-rouge-et-le-noir-thumb.webp" alt="Le Rouge et Le Noir book cover">
     <p>Le Rouge et Le Noir</p>
   </div>
   <div class="book-item">
-    <img src="/assets/book-covers/le-pere-goriot.jpg" alt="Le Père Goriot book cover">
+    <img src="/img/book-covers/le-pere-goriot-thumb.webp" alt="Le Père Goriot book cover">
     <p>Le Père Goriot</p>
   </div>
   <div class="book-item">
-    <img src="/assets/book-covers/madame-bovary.jpg" alt="Madame Bovary book cover">
+    <img src="/img/book-covers/madame-bovary-thumb.webp" alt="Madame Bovary book cover">
     <p>Madame Bovary</p>
   </div>
 </div>

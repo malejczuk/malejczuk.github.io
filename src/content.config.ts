@@ -21,9 +21,9 @@ const photography = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		shot_on: z.string().optional(),
-		/** Folder under public/ holding the gallery's images. */
+		/** Folder under src/images/ holding the gallery's photos, e.g. "photography/azores". */
 		gallery_folder: z.string(),
-		/** Image under public/ shown on the Photography index card. */
+		/** Photo under src/images/ shown on the Photography index card. */
 		cover_image: z.string(),
 	}),
 });

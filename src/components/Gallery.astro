@@ -1,28 +1,30 @@
 ---
-// Every image in a folder under public/, in filename order, each opening in the lightbox.
-import { readdirSync } from 'node:fs';
-import { extname, join } from 'node:path';
+// Every photo in a src/images/ folder, in filename order, each opening in the lightbox.
+import 'luminous-lightbox/dist/luminous-basic.min.css';
+import { imagesIn } from '../lib/images';
 
 interface Props {
-	/** Folder relative to public/, e.g. "assets/photography/azores". */
+	/** Folder under src/images/, e.g. "photography/azores". */
 	folder: string;
 	title: string;
 }
 
 const { folder, title } = Astro.props;
-const IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.JPG', '.png'];
-
-const images = readdirSync(join(process.cwd(), 'public', folder))
-	.filter((file) => IMAGE_EXTENSIONS.includes(extname(file)))
-	.sort()
-	.map((file) => encodeURI(`/${folder}/${file}`));
+const images = imagesIn(folder);
 ---
 <div class="image-gallery">
-  {images.map((src) => (
+  {images.map((image) => (
     <div class="gallery-item">
-      <a href={src} class="lightbox">
-        <img src={src} alt={`${title} - Photography`}>
+      <a href={image.src} class="lightbox">
+        <img src={image.thumb} width={image.thumbWidth} height={image.thumbHeight} loading="lazy" decoding="async" alt={`${title} - Photography`}>
       </a>
     </div>
   ))}
 </div>
+
+<script>
+  import { LuminousGallery } from 'luminous-lightbox';
+
+  // This 'captures' the clicks so a new page doesn't open
+  new LuminousGallery(document.querySelectorAll('.lightbox'));
+</script>

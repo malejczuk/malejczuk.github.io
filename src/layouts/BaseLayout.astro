@@ -1,4 +1,5 @@
 ---
+import '@fontsource/open-sans/400.css';
 import Analytics from '../components/Analytics.astro';
 import Seo from '../components/Seo.astro';
 
@@ -27,13 +28,6 @@ if (!title) throw new Error(`Missing title for ${Astro.url.pathname}`);
 
 		{import.meta.env.PROD && <Analytics />}
 
-		<!-- Luminous CSS -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/luminous-lightbox@2.4.0/dist/luminous-basic.min.css" >
-
-		<!-- font -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<nav aria-label="Main Navigation">
@@ -56,11 +50,5 @@ if (!title) throw new Error(`Missing title for ${Astro.url.pathname}`);
 				<li><a href="mailto:kristoff@thestudio.uno">Email</a></li>
 			</ul>
 		</footer>
-		<!-- Luminous JS -->
-		<script is:inline src="https://cdn.jsdelivr.net/npm/luminous-lightbox@2.4.0/dist/luminous.min.js"></script>
-		<script is:inline>
-			// This 'captures' the clicks so a new page doesn't open
-			new LuminousGallery(document.querySelectorAll(".lightbox"));
-		</script>
 	</body>
 </html>

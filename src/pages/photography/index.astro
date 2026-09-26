@@ -1,30 +1,37 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { image } from '../../lib/images';
 
 const galleries = (await getCollection('photography')).sort((a, b) => (a.id < b.id ? -1 : 1));
+const photo = image('photography/albania-pentax.jpg');
 ---
 <BaseLayout title="Photography">
 <h1 id="photography">Photography</h1>
 
 <div class="gallery-index">
-  {galleries.map(({ id, data }) => (
+  {galleries.map(({ id, data }) => {
+    const cover = image(data.cover_image);
+    return (
     <a href={`/photography/${id}`} class="gallery-card">
       <div class="card-image-wrapper">
-        <img src={encodeURI(`/${data.cover_image}`)} alt={data.title} />
+        <img src={cover.thumb} width={cover.thumbWidth} height={cover.thumbHeight} alt={data.title} />
       </div>
       <div class="card-info">
         <h2>{data.title}</h2>
         {data.shot_on && <p>{data.shot_on}</p>}
       </div>
     </a>
-  ))}
+    );
+  })}
 </div>
+
+<p><a href="mailto:kristoff@thestudio.uno">Contact me</a> for prints and licensing.</p>
 
 <p><a href="/writing/cellphonecameras">See here</a> for my thoughts on cell phone cameras and why I also shoot on film.</p>
 
 <figure class="photo-figure">
-  <img src="/assets/photography/albania-pentax.jpg" alt="Kristoff holding his Pentax camera on a hillside">
+  <img src={photo.src} width={photo.width} height={photo.height} loading="lazy" alt="Kristoff holding his Pentax camera on a hillside">
   <figcaption>me with my Pentax in the South of Albania</figcaption>
 </figure>
 </BaseLayout>
