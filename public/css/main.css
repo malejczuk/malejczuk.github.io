@@ -267,6 +267,11 @@ footer ul {
   transform: scale(1.02);
 }
 
+/* The global img rule makes images block-level, so centre the lightbox image with margins */
+.lum-lightbox-inner img {
+  margin: 0 auto;
+}
+
 .gallery-index {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
