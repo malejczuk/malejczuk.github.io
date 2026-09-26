@@ -27,6 +27,9 @@ const LARGE = 2000;
 const THUMB = 800;
 const SHARE = { width: 1200, height: 630 };
 const QUALITY = { large: 82, thumb: 78, share: 80 };
+// If the large version comes out bigger than the original (already-small, already-compressed
+// photos), re-encode it at lower quality, down to this floor, until it's smaller.
+const MIN_QUALITY = 60;
 const EXIF = {
 	IFD0: {
 		Artist: 'Kristoff Malejczuk',
@@ -34,7 +37,7 @@ const EXIF = {
 	},
 };
 // Bump when the settings above change, so every image is regenerated.
-const VERSION = 2;
+const VERSION = 3;
 
 const IMAGE = /\.(jpe?g|png)$/i;
 
@@ -60,7 +63,7 @@ async function render(input, output, resize, format) {
 	const image = sharp(input).rotate().resize(resize);
 	const encoded = format === 'jpeg' ? image.jpeg({ quality: QUALITY.share, mozjpeg: true }) : image.webp(format);
 	const info = await encoded.withExif(EXIF).toFile(output);
-	return { width: info.width, height: info.height };
+	return { width: info.width, height: info.height, size: info.size };
 }
 
 const previous = existsSync(MANIFEST) ? JSON.parse(await readFile(MANIFEST, 'utf8')) : { images: {} };
@@ -80,7 +83,7 @@ async function processImage(file) {
 	const large = join(OUT, `${name}.webp`);
 	const thumb = join(OUT, `${name}-thumb.webp`);
 	const share = join(OUT, `${name}-share.jpg`);
-	const { mtimeMs } = await stat(file);
+	const { mtimeMs, size: originalSize } = await stat(file);
 	const cached = reuse[path];
 	if (cached && cached.mtimeMs === mtimeMs && [large, thumb, share].every((f) => existsSync(f))) {
 		images[path] = cached;
@@ -88,7 +91,13 @@ async function processImage(file) {
 	}
 
 	await mkdir(dirname(large), { recursive: true });
-	const big = await render(file, large, { width: LARGE, height: LARGE, fit: 'inside', withoutEnlargement: true }, { quality: QUALITY.large });
+	const largeResize = { width: LARGE, height: LARGE, fit: 'inside', withoutEnlargement: true };
+	let quality = QUALITY.large;
+	let big = await render(file, large, largeResize, { quality });
+	while (big.size >= originalSize && quality > MIN_QUALITY) {
+		quality -= 6;
+		big = await render(file, large, largeResize, { quality });
+	}
 	const small = await render(file, thumb, { width: THUMB, withoutEnlargement: true }, { quality: QUALITY.thumb });
 	// Crop to the most interesting region (faces, detail) rather than the centre.
 	await render(file, share, { ...SHARE, fit: 'cover', position: sharp.strategy.attention }, 'jpeg');
