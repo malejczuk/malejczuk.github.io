@@ -1,0 +1,26 @@
+---
+import { getCollection, render } from 'astro:content';
+import Gallery from '../../components/Gallery.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+	const galleries = await getCollection('photography');
+	return galleries.map((gallery) => ({ params: { slug: gallery.id }, props: { gallery } }));
+}
+
+const { gallery } = Astro.props;
+const { title, shot_on, gallery_folder } = gallery.data;
+const { Content } = await render(gallery);
+---
+<BaseLayout title={title}>
+<div class="gallery-header">
+<h1>{title}</h1>
+{shot_on && <h3>Shot on: {shot_on}</h3>}
+</div>
+
+<div class="gallery-description">
+  <Content />
+</div>
+
+<Gallery folder={gallery_folder} title={title} />
+</BaseLayout>

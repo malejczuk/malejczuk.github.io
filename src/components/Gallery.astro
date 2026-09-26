@@ -1,0 +1,28 @@
+---
+// Every image in a folder under public/, in filename order, each opening in the lightbox.
+import { readdirSync } from 'node:fs';
+import { extname, join } from 'node:path';
+
+interface Props {
+	/** Folder relative to public/, e.g. "assets/photography/azores". */
+	folder: string;
+	title: string;
+}
+
+const { folder, title } = Astro.props;
+const IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.JPG', '.png'];
+
+const images = readdirSync(join(process.cwd(), 'public', folder))
+	.filter((file) => IMAGE_EXTENSIONS.includes(extname(file)))
+	.sort()
+	.map((file) => encodeURI(`/${folder}/${file}`));
+---
+<div class="image-gallery">
+  {images.map((src) => (
+    <div class="gallery-item">
+      <a href={src} class="lightbox">
+        <img src={src} alt={`${title} - Photography`}>
+      </a>
+    </div>
+  ))}
+</div>

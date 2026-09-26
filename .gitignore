@@ -1,3 +1,13 @@
+# build output
+dist/
+.astro/
 _site/
+
+# dependencies
+node_modules/
+
+# cloudflare
+.wrangler/
+
 *.DS_Store
 *.swp

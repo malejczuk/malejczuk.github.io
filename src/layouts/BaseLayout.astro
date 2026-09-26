@@ -1,0 +1,66 @@
+---
+import Analytics from '../components/Analytics.astro';
+import Seo from '../components/Seo.astro';
+
+interface Props {
+	title?: string;
+	date?: string;
+	/** Set automatically when a Markdown page uses this as its `layout`. */
+	frontmatter?: { title: string };
+}
+
+const { frontmatter, title = frontmatter?.title, date } = Astro.props;
+if (!title) throw new Error(`Missing title for ${Astro.url.pathname}`);
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<Seo title={title} date={date} />
+
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<link rel="icon" href="/assets/favicon.ico">
+
+		<meta name="google-site-verification" content="1p2DnKc7ElrX3soLFvhbYVPtA24mwji9eqLcsNE3l6M" />
+
+		{import.meta.env.PROD && <Analytics />}
+
+		<!-- Luminous CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/luminous-lightbox@2.4.0/dist/luminous-basic.min.css" >
+
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<nav aria-label="Main Navigation">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/studio">The Studio</a></li>
+				<li><a href="/yoga">Yoga</a></li>
+				<li><a href="/photography">Photography</a></li>
+				<li><a href="/writing">Writing</a></li>
+				<!-- <li><a href="/about">About</a></li> -->
+			</ul>
+		</nav>
+		<main class="container">
+			<slot />
+		</main>
+		<footer>
+			<ul>
+				<li><a href="https://www.youtube.com/@thestudiowithkristoff">YouTube</a></li>
+				<li><a href="https://x.com/malejczukk">X</a></li>
+				<li><a href="mailto:access.liquid70@icloud.com">Email</a></li>
+			</ul>
+		</footer>
+		<!-- Luminous JS -->
+		<script is:inline src="https://cdn.jsdelivr.net/npm/luminous-lightbox@2.4.0/dist/luminous.min.js"></script>
+		<script is:inline>
+			// This 'captures' the clicks so a new page doesn't open
+			new LuminousGallery(document.querySelectorAll(".lightbox"));
+		</script>
+	</body>
+</html>

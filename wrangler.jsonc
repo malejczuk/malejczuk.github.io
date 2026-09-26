@@ -1,0 +1,13 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "thestudio",
+	"compatibility_date": "2026-09-01",
+	// Static site only: Cloudflare serves the built files in dist/ with no Worker code.
+	"assets": {
+		"directory": "./dist",
+		// Serves writing/studio.html at /writing/studio and studio/index.html at /studio/,
+		// redirecting /studio to /studio/ like GitHub Pages did.
+		"html_handling": "auto-trailing-slash",
+		"not_found_handling": "none"
+	}
+}

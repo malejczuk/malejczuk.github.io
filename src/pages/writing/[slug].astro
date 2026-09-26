@@ -1,0 +1,35 @@
+---
+import { getCollection, render } from 'astro:content';
+import WritingMenu from '../../components/WritingMenu.md';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+	const pieces = await getCollection('writing');
+	return pieces.map((piece) => ({ params: { slug: piece.id }, props: { piece } }));
+}
+
+const { piece } = Astro.props;
+const { title, date, raw } = piece.data;
+const { Content } = await render(piece);
+---
+<BaseLayout title={title} date={date}>
+<div class="writing-layout">
+<article class="writing-content">
+  <h2 style="margin-bottom: 0;">{title}</h2>
+  {raw ? <Fragment set:html={piece.body} /> : <Content />}
+
+  <div class="sig-wrapper">
+    <div>
+      <hr />
+      <p>Kristoff Malejczuk <br />
+{date}</p>
+    </div>
+  </div>
+</article>
+
+<aside class="writing-sidebar">
+  <h3 id="writing">Writing</h3>
+  <WritingMenu />
+</aside>
+</div>
+</BaseLayout>

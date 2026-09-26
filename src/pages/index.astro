@@ -1,0 +1,25 @@
+---
+import ContactForm from '../components/ContactForm.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Welcome">
+<h1 id="welcome-to-the-studio">Welcome to The Studio.</h1>
+
+<div class="image-text-pair home-intro">
+  <p><img src="/assets/home/IMG_3853.JPG" alt="Kristoff in Montserrat" /></p>
+  <div class="pair-text">
+    <h2 id="my-name-is-kristoff-and-i-live-in-barcelona">My name is Kristoff and I live in Barcelona.</h2>
+
+    <div class="dedication-block">
+      <p>I am currently dedicating my time to:</p>
+      <ol>
+        <li><a href="/yoga"><strong>Yoga Asana</strong></a></li>
+        <li><a href="/studio"><strong>Literature</strong></a></li>
+        <li><a href="/writing"><strong>Narrative</strong></a></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<ContactForm />
+</BaseLayout>

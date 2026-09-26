@@ -1,9 +1,0 @@
-title: "The Studio by Kristoff Malejczuk"
-author: Kristoff Malejczuk
-markdown: kramdown
-url: "https://thestudio.uno"
-baseurl: ""
-plugins:
-    - jekyll-sitemap
-    - jekyll-seo-tag
-google_analytics: G-B637RMTJB4

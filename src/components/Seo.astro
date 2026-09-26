@@ -1,0 +1,66 @@
+---
+// Title, Open Graph and JSON-LD tags, matching what jekyll-seo-tag generated.
+import { AUTHOR, SITE_TITLE } from '../consts';
+
+interface Props {
+	title: string;
+	/** Writing date as shown on the page, e.g. "May 21, 2020" or "February 14-15, 2025". */
+	date?: string;
+}
+
+const { title, date } = Astro.props;
+
+// Canonical URLs are the ones Cloudflare serves: /writing/studio for writing/studio.html,
+// /studio/ for studio/index.html.
+const pathname = Astro.url.pathname.replace(/index\.html$/, '').replace(/\.html$/, '');
+const url = new URL(pathname, Astro.site).href;
+const isHome = pathname === '/';
+
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+/** "May 21, 2020" -> "2020-05-21T00:00:00+00:00". A day range uses its first day. */
+function toIsoDate(value: string) {
+	const match = /^([A-Za-z]+) (\d{1,2})(?:-\d{1,2})?, (\d{4})$/.exec(value);
+	const month = match ? MONTHS.indexOf(match[1]) + 1 : 0;
+	if (!match || month === 0) {
+		throw new Error(`Unrecognised date "${value}" on "${title}"; expected e.g. "May 21, 2020".`);
+	}
+	const pad = (n: number | string) => String(n).padStart(2, '0');
+	return `${match[3]}-${pad(month)}-${pad(match[2])}T00:00:00+00:00`;
+}
+
+const published = date ? toIsoDate(date) : undefined;
+const author = { '@type': 'Person', name: AUTHOR };
+const jsonLd = published
+	? {
+			'@context': 'https://schema.org',
+			'@type': 'BlogPosting',
+			author,
+			dateModified: published,
+			datePublished: published,
+			headline: title,
+			mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+			url,
+		}
+	: {
+			'@context': 'https://schema.org',
+			'@type': isHome ? 'WebSite' : 'WebPage',
+			author,
+			headline: title,
+			...(isHome && { name: SITE_TITLE }),
+			url,
+		};
+---
+<title>{title} | {SITE_TITLE}</title>
+<meta name="generator" content={Astro.generator} />
+<meta property="og:title" content={title} />
+<meta name="author" content={AUTHOR} />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href={url} />
+<meta property="og:url" content={url} />
+<meta property="og:site_name" content={SITE_TITLE} />
+<meta property="og:type" content={published ? 'article' : 'website'} />
+{published && <meta property="article:published_time" content={published} />}
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content={title} />
+<script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

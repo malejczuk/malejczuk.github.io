@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const galleries = (await getCollection('photography')).sort((a, b) => (a.id < b.id ? -1 : 1));
+---
+<BaseLayout title="Photography">
+<h1 id="photography">Photography</h1>
+
+<div class="gallery-index">
+  {galleries.map(({ id, data }) => (
+    <a href={`/photography/${id}`} class="gallery-card">
+      <div class="card-image-wrapper">
+        <img src={encodeURI(`/${data.cover_image}`)} alt={data.title} />
+      </div>
+      <div class="card-info">
+        <h2>{data.title}</h2>
+        {data.shot_on && <p>{data.shot_on}</p>}
+      </div>
+    </a>
+  ))}
+</div>
+
+<p><a href="/writing/cellphonecameras">See here</a> for my thoughts on cell phone cameras and why I also shoot on film.</p>
+</BaseLayout>
