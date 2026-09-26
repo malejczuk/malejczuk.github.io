@@ -6,5 +6,6 @@
 [God’s Country](/writing/godscountry) (SF→NY, 2023) <br>
 [Farewell](/writing/farewell) (SF, 2024) <br>
 [Infinite Grace](/writing/infinitegrace) (El Valle, 2025) <br>
+[Cristo Pie](/writing/cristopie) (BCN, 2026) <br>
 [Cell phone cameras](/writing/cellphonecameras) (BCN, 2026) <br>
 [Cómo se llama la luna](/writing/comosellamalaluna) (BCN, 2026) <br>
