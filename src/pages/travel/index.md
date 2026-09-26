@@ -25,12 +25,6 @@ If you have any questions, reach out to me.
 
 * Xela
 * Lago Atitlán
-* San Pedro La Laguna
-* San Juan La Laguna
-* Panajachel
-* San Marcos La Laguna
-* Santa Cruz La Laguna
-* San Marcos La Laguna
 * Antigua Guatemala
 
 ### Mexico
@@ -43,11 +37,7 @@ If you have any questions, reach out to me.
 * Palenque
 * Campeche
 * Mérida
-* Celestún
-* Uxmal
 * Valladolid
-* Ek Balam
-* Chichen Itza
 * Holbox
 * Valladolid
 * Mérida
@@ -96,14 +86,11 @@ If you have any questions, reach out to me.
 * Lancha: Iquitos a Yurimaguas
 * Yurimaguas
 * Tarapoto
-* Lamas
-* Huapo
 * Chachapoyas
 * Leymebamba
 * Cajamarca
 * Huanchaco
 * Huaraz
-* Huayhuash
 * Lima
 * Ayacucho
 * Cusco
