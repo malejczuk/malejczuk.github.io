@@ -39,6 +39,8 @@ The booklist is ordered by the approximate difficulty of the prose.
 
 </div>
 
+<p class="booklist-note">Unread books are greyed out.</p>
+
 ## Franco-Russian Realism
 
 This list is the focus for my ongoing YouTube [Literature Project](/studio/#literature-project).

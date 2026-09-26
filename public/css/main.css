@@ -99,8 +99,15 @@ tr:has(.unread) td {
   opacity: 0.45;
 }
 
+/* The note sits just under its table, taking over the table's space below */
+.table-wrapper:has(+ .booklist-note) table {
+  margin-bottom: 0.5rem;
+}
+
 .booklist-note {
+  margin: 0 0 3rem;
   font-size: 0.9rem;
+  opacity: 0.45;
 }
 
 .page-toc {
