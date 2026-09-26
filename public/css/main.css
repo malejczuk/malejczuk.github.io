@@ -272,6 +272,16 @@ footer ul {
   margin: 0 auto;
 }
 
+/* On phones Luminous shows photos at full size to pan around; fit them to the screen instead.
+   (Extra specificity because the Luminous stylesheet loads after this one.) */
+@media (max-width: 460px) {
+  .lum-lightbox-inner img.lum-img {
+    max-width: 95vw;
+    max-height: 95vh;
+    max-height: 95dvh;
+  }
+}
+
 .gallery-index {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
