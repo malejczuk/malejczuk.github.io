@@ -42,15 +42,6 @@ If you have any questions, reach out to me.
 * Valladolid
 * Mérida
 
-### United States
-
-* SF
-
-### Canada
-
-* Ottawa
-* Montréal
-
 ## 2025
 
 ### Colombia
@@ -109,7 +100,3 @@ If you have any questions, reach out to me.
 * La Serena
 * Valparaíso
 * Santiago
-
-### Spain
-
-* Barcelona
