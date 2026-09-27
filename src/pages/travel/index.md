@@ -9,7 +9,7 @@ description: "I backpacked around Latin America from September 2024 to September
 I backpacked around Latin America from September 2024 to September 2025.
 It was the most enriching experience of my life, and I use the word enriching literally: I became extraordinarily rich (though not in the monetary sense).
 I recommend such a trip to anyone.
-I will flush out this page with more information; for now I will just leave my itinerary below.
+I will flesh out this page with more information; for now I will just leave my itinerary below.
 If you have any questions, reach out to me.
 
 ## 2024
@@ -82,10 +82,12 @@ If you have any questions, reach out to me.
 * Cajamarca
 * Huanchaco
 * Huaraz
+* [Huayhuash Cordillera](/photography/huayhuash)
+* Huaraz
 * Lima
 * Ayacucho
 * Cusco
-* Salkantay Trek
+* [Salkantay Trek](/photography/salkantay)
 * Machu Picchu Pueblo
 * Cusco
 * Arequipa
@@ -94,7 +96,7 @@ If you have any questions, reach out to me.
 
 * Arica
 * Iquique
-* San Pedro de Atacama
+* [San Pedro de Atacama](/photography/san-pedro)
 * La Serena
 * Vicuña
 * La Serena

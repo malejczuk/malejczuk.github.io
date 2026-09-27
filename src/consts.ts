@@ -17,5 +17,5 @@ export const PERSON = {
 /** Preview image for shared links when a page doesn't set its own (a photo under src/images/). */
 export const DEFAULT_SHARE_IMAGE = {
 	path: 'photography/albania-pentax.jpg',
-	alt: 'Man holding a film camera on a sunny hillside',
+	alt: 'Kristoff holding a film camera on a sunny hillside',
 };

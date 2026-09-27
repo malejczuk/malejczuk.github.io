@@ -421,6 +421,7 @@ footer ul {
 
 /* e.g. "(coming soon)" after a heading */
 .heading-note {
+  font-size: 0.7em;
   font-weight: normal;
 }
 
