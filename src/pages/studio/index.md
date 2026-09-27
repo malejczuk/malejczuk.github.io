@@ -13,7 +13,7 @@ The Studio is an organic, evolving project that has taken several forms:
 * [Entertainment Show / Podcast](#entertainment-show) (2020-2021)
 * [Poem](#poem) (2020)
 
-<h2 id="literature-project">Literature Project (coming soon)</h2>
+<h2 id="literature-project">Literature Project <span class="heading-note">(coming soon)</span></h2>
 
 For more on what I'm reading, and to follow along, [see here for my booklists.](/studio/booklists)
 
