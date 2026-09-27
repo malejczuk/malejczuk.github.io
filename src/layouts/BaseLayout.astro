@@ -1,0 +1,64 @@
+---
+import '@fontsource/open-sans/400.css';
+import Analytics from '../components/Analytics.astro';
+import Seo, { type ShareImage } from '../components/Seo.astro';
+
+interface Props {
+	title?: string;
+	description?: string;
+	date?: string;
+	/** Preview image for shared links; defaults to DEFAULT_SHARE_IMAGE. */
+	image?: ShareImage;
+	/** Set automatically when a Markdown page uses this as its `layout`. */
+	frontmatter?: { title: string; description?: string; share_image?: string; share_image_alt?: string };
+}
+
+const {
+	frontmatter,
+	title = frontmatter?.title,
+	description = frontmatter?.description,
+	date,
+	image = frontmatter?.share_image ? { path: frontmatter.share_image, alt: frontmatter.share_image_alt ?? title! } : undefined,
+} = Astro.props;
+if (!title) throw new Error(`Missing title for ${Astro.url.pathname}`);
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<Seo title={title} description={description} date={date} image={image} />
+
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<link rel="icon" href="/assets/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+		<meta name="google-site-verification" content="1p2DnKc7ElrX3soLFvhbYVPtA24mwji9eqLcsNE3l6M" />
+
+		{import.meta.env.PROD && <Analytics />}
+
+	</head>
+	<body>
+		<nav aria-label="Main Navigation">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/studio">The Studio</a></li>
+				<li><a href="/yoga">Yoga</a></li>
+				<li><a href="/photography">Photography</a></li>
+				<li><a href="/writing">Writing</a></li>
+				<li><a href="/travel">Travel</a></li>
+			</ul>
+		</nav>
+		<main class="container">
+			<slot />
+		</main>
+		<footer>
+			<ul>
+				<li><a href="https://www.youtube.com/@thestudiowithkristoff">YouTube</a></li>
+				<li><a href="https://x.com/malejczukk">X</a></li>
+				<li><a href="mailto:kristoff@thestudio.uno">Email</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>

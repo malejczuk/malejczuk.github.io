@@ -1,0 +1,97 @@
+---
+// Title, description, link-preview (Open Graph / X) and JSON-LD tags.
+import { AUTHOR, DEFAULT_SHARE_IMAGE, PERSON, SITE_TITLE } from '../consts';
+import { image as webImage } from '../lib/images';
+
+export interface ShareImage {
+	/** Photo under src/images/, e.g. "photography/azores/azores - 1.jpeg". */
+	path: string;
+	alt: string;
+}
+
+interface Props {
+	title: string;
+	/** Shown under the link in search results and link previews. Without one, search engines pick text from the page. */
+	description?: string;
+	/** Writing date as shown on the page, e.g. "May 21, 2020" or "February 14-15, 2025". */
+	date?: string;
+	image?: ShareImage;
+}
+
+const { title, description, date, image = DEFAULT_SHARE_IMAGE } = Astro.props;
+const shareImage = new URL(webImage(image.path).share, Astro.site).href;
+
+// Canonical URLs are the ones Cloudflare serves: /writing/studio for writing/studio.html,
+// /studio/ for studio/index.html.
+const pathname = Astro.url.pathname.replace(/index\.html$/, '').replace(/\.html$/, '');
+const url = new URL(pathname, Astro.site).href;
+const isHome = pathname === '/';
+
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+/** "May 21, 2020" -> "2020-05-21T00:00:00+00:00". A day range uses its first day. */
+function toIsoDate(value: string) {
+	const match = /^([A-Za-z]+) (\d{1,2})(?:-\d{1,2})?, (\d{4})$/.exec(value);
+	const month = match ? MONTHS.indexOf(match[1]) + 1 : 0;
+	if (!match || month === 0) {
+		throw new Error(`Unrecognised date "${value}" on "${title}"; expected e.g. "May 21, 2020".`);
+	}
+	const pad = (n: number | string) => String(n).padStart(2, '0');
+	return `${match[3]}-${pad(month)}-${pad(match[2])}T00:00:00+00:00`;
+}
+
+const published = date ? toIsoDate(date) : undefined;
+const home = new URL('/', Astro.site).href;
+// The same @id on every page tells search engines it's always the same person.
+const author = { '@type': 'Person', '@id': `${home}#person`, name: PERSON.name, url: home };
+const person = {
+	...author,
+	image: new URL(webImage(PERSON.image).src, Astro.site).href,
+	sameAs: PERSON.sameAs,
+};
+const page = published
+	? {
+			'@context': 'https://schema.org',
+			'@type': 'BlogPosting',
+			author,
+			dateModified: published,
+			datePublished: published,
+			description,
+			headline: title,
+			image: shareImage,
+			mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+			url,
+		}
+	: {
+			'@context': 'https://schema.org',
+			'@type': isHome ? 'WebSite' : 'WebPage',
+			author,
+			description,
+			headline: title,
+			image: shareImage,
+			...(isHome && { name: SITE_TITLE }),
+			url,
+		};
+const { '@context': context, ...pageNode } = page;
+const jsonLd = isHome ? { '@context': context, '@graph': [pageNode, person] } : page;
+---
+<title>{title} | {SITE_TITLE}</title>
+{description && <meta name="description" content={description} />}
+<meta name="generator" content={Astro.generator} />
+<meta property="og:title" content={title} />
+{description && <meta property="og:description" content={description} />}
+<meta name="author" content={AUTHOR} />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href={url} />
+<meta property="og:url" content={url} />
+<meta property="og:site_name" content={SITE_TITLE} />
+<meta property="og:type" content={published ? 'article' : 'website'} />
+{published && <meta property="article:published_time" content={published} />}
+<meta property="og:image" content={shareImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={image.alt} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+{description && <meta name="twitter:description" content={description} />}
+<script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

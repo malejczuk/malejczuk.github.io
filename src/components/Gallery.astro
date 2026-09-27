@@ -1,0 +1,32 @@
+---
+// Every photo in a src/images/ folder, in filename order, each opening in the lightbox.
+import 'luminous-lightbox/dist/luminous-basic.min.css';
+import { imagesIn } from '../lib/images';
+
+interface Props {
+	/** Folder under src/images/, e.g. "photography/azores". */
+	folder: string;
+	title: string;
+	/** Description of each photo, by file name. */
+	alt: Record<string, string>;
+}
+
+const { folder, title, alt } = Astro.props;
+const images = imagesIn(folder);
+---
+<div class="image-gallery">
+  {images.map((image) => (
+    <div class="gallery-item">
+      <a href={image.src} class="lightbox">
+        <img src={image.thumb} width={image.thumbWidth} height={image.thumbHeight} loading="lazy" decoding="async" alt={alt[image.name] ?? `Photograph from ${title}`}>
+      </a>
+    </div>
+  ))}
+</div>
+
+<script>
+  import { LuminousGallery } from 'luminous-lightbox';
+
+  // This 'captures' the clicks so a new page doesn't open
+  new LuminousGallery(document.querySelectorAll('.lightbox'));
+</script>

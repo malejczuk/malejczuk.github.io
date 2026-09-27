@@ -1,0 +1,23 @@
+{
+  "name": "thestudio",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "images": "node scripts/build-images.mjs",
+    "dev": "npm run images && astro dev",
+    "build": "npm run images && astro build",
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "favicon": "node scripts/build-favicon.mjs",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fontsource/open-sans": "^5.3.0",
+    "astro": "^7.3.5",
+    "luminous-lightbox": "^2.4.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.4",
+    "wrangler": "^4.141.0"
+  }
+}
