@@ -9,7 +9,7 @@ export const GOOGLE_ANALYTICS_ID = 'G-B637RMTJB4';
 export const PERSON = {
 	name: AUTHOR,
 	/** Photo under src/images/. */
-	image: 'home/IMG_3853.JPG',
+	image: 'home/alley.jpeg',
 	/** Your profiles elsewhere. */
 	sameAs: ['https://www.youtube.com/@thestudiowithkristoff', 'https://x.com/malejczukk'],
 };
