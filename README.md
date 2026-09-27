@@ -20,7 +20,7 @@ npm run preview   # build, then serve dist/ the way Cloudflare will
 | Home, Photography and Writing indexes | `src/pages/**/*.astro` |
 | Page shell (nav, footer, head) | `src/layouts/BaseLayout.astro` |
 | Styles | `public/css/main.css` |
-| Images and favicon | `public/assets/` |
+| Favicon | `src/favicon.jpg` (a square photo); run `npm run favicon` after changing it |
 
 In the booklists, books you haven't read yet have their title wrapped in `<span class="unread">…</span>`, which fades the row. When you finish one, remove the wrapper.
 

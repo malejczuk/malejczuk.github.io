@@ -8,6 +8,7 @@
     "build": "npm run images && astro build",
     "preview": "npm run build && wrangler dev",
     "deploy": "npm run build && wrangler deploy",
+    "favicon": "node scripts/build-favicon.mjs",
     "astro": "astro"
   },
   "dependencies": {
