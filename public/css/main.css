@@ -211,6 +211,17 @@ footer ul {
   align-items: start;
 }
 
+/* "Spanish" heading in the writing list: lighter than other headings, close to its list */
+.writing-menu-heading {
+  margin: 2.5rem 0 0;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 500;
+}
+
+.writing-menu-heading + p {
+  margin-top: 0.4rem;
+}
+
 .writing-sidebar {
   position: sticky;
   top: 2rem;
