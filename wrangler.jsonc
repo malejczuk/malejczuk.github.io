@@ -9,5 +9,7 @@
 		// redirecting /studio to /studio/ like GitHub Pages did.
 		"html_handling": "auto-trailing-slash",
 		"not_found_handling": "none"
-	}
+	},
+	// Lets Cloudflare publish a preview of each pull request before it's merged.
+	"previews": {}
 }
