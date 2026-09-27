@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import WritingMenu from '../../components/WritingMenu.md';
+import WritingMenuSpanish from '../../components/WritingMenuSpanish.md';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
@@ -30,6 +31,8 @@ const { Content } = await render(piece);
 <aside class="writing-sidebar">
   <h3 id="writing">Writing</h3>
   <WritingMenu />
+  <h4>Spanish</h4>
+  <WritingMenuSpanish />
 </aside>
 </div>
 </BaseLayout>
