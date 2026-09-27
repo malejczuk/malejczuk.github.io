@@ -27,7 +27,7 @@ If you have any questions, reach out to me.
 * Lago Atitlán
 * Antigua Guatemala
 
-### Mexico (6.5 weeks)
+### Mexico (1.5 months)
 
 * CDMX
 * Guanajuato
@@ -90,7 +90,7 @@ If you have any questions, reach out to me.
 * Cusco
 * Arequipa
 
-### Chile (5.5 weeks)
+### Chile (1 month and 1 week)
 
 * Arica
 * Iquique
